@@ -5,41 +5,54 @@
 
 <div id="myPlot" style="width:100%;max-width:700px"></div>
 
-<!-- <form id="time">
-  <input type="text">
-  <input type="text">
-  <button onclick="formFunction()">Try it</button>
-  <input type="reset">
-</form> -->
-
-<input type="text" id="myText" value="">
-<button type="button" onclick="myFunction()">Show</button>
-
+  <form>
+    <label for="fname"><strong>Start Time:</strong></label>
+    <br>
+    <input type="text" id="startTime" value="">
+    <br>
+    <label for="fname"><strong>Stop Time:</strong></label>
+    <br>
+    <input type="text" id="stopTime" value="">
+    <input type="reset" value="Reset">
+    <button type="button" onclick="timeFunction()">Show</button>
+  </form>
 
   <script>
-    function myFunction() {
-      console.log(Number(document.getElementById("myText").value)) 
+    let a = 0
+    let b = 0
+
+    function timeFunction() {
+      a = Number(document.getElementById("startTime").value)
+      b = Number(document.getElementById("stopTime").value)
+      
+      var timeArray = [0,10,25];
+      // Sensor 1
+      var tempArray = [25,30,40];
+      // Sensor 2
+      var temp2Array = [35,45,35];
+
+      // Define Data
+      var data = [
+        {x: timeArray, y: tempArray, mode:"lines", name:"Sensor 1"},
+        {x: timeArray, y: temp2Array, mode:"lines", name:"Sensor 2"}
+      ];
+
+      // var data = [
+      // {x: x1Values, y: y1Values, mode:"lines"},
+      // {x: x2Values, y: y2Values, mode:"lines"},
+      // {x: x3Values, y: y3Values, mode:"lines"}
+      // ];
+
+      // Define Layout
+      var layout = {
+        xaxis: {range: [a, b], title: "Time (Hours)"},
+        yaxis: {range: [0, 50], title: "Temperature (°C)"},  
+        title: "Temperature"
+      };
+
+      // Display using Plotly
+      Plotly.newPlot("myPlot", data, layout);
     }
-
-    var xArray = [1,2];
-    var yArray = [25,30,30,30,40,20,20,50];
-
-    // Define Data
-    var data = [{
-      x: xArray,
-      y: yArray,
-      mode:"lines"
-    }];
-
-    // Define Layout
-    var layout = {
-      xaxis: {range: [1, 30], title: "Time (Minutes)"},
-      yaxis: {range: [0, 50], title: "Temperature (°C)"},  
-      title: "Temperature"
-    };
-
-    // Display using Plotly
-    Plotly.newPlot("myPlot", data, layout);
   </script>
 </body>
 </html>
