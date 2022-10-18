@@ -27,21 +27,33 @@
       
       var timeArray = [0,10,25];
       // Sensor 1
-      var tempArray = [25,30,40];
+      var temp1Array = [25,30,40];
       // Sensor 2
-      var temp2Array = [35,45,35];
+      var temp2Array = [10,45,35];
+      // Sensor 3
+      var temp3Array = [35,15,45];
+      // Sensor 4
+      var temp4Array = [30,49,31];
+      // Sensor 5
+      var temp5Array = [28,42,50];
 
       // Define Data
       var data = [
-        {x: timeArray, y: tempArray, mode:"lines", name:"Sensor 1"},
-        {x: timeArray, y: temp2Array, mode:"lines", name:"Sensor 2"}
-      ];
+        {x: timeArray, y: temp1Array, mode:"lines+markers", 
+        line: {color: 'rgb(255,0,0)', width: 3}, name:"Sensor 1"},
 
-      // var data = [
-      // {x: x1Values, y: y1Values, mode:"lines"},
-      // {x: x2Values, y: y2Values, mode:"lines"},
-      // {x: x3Values, y: y3Values, mode:"lines"}
-      // ];
+        {x: timeArray, y: temp2Array, mode:"lines+markers", 
+        line: {color: 'rgb(255,0,0)', width: 3}, name:"Sensor 2"},
+
+        {x: timeArray, y: temp3Array, mode:"lines+markers", 
+        line: {color: 'rgb(255,0,0)', width: 3}, name:"Sensor 3"},
+
+        {x: timeArray, y: temp4Array, mode:"lines+markers", 
+        line: {color: 'rgb(255,0,0)', width: 3}, name:"Sensor 4"},
+
+        {x: timeArray, y: temp5Array, mode:"lines+markers", 
+        line: {color: 'rgb(255,0,0)', width: 3}, name:"Sensor 5"}
+      ];
 
       // Define Layout
       var layout = {
@@ -53,6 +65,8 @@
       // Display using Plotly
       Plotly.newPlot("myPlot", data, layout);
     }
+
+    // Axel Roxenborg
   </script>
 </body>
 </html>
