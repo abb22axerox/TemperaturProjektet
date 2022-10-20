@@ -25,17 +25,19 @@
       a = Number(document.getElementById("startTime").value)
       b = Number(document.getElementById("stopTime").value)
       
-      var timeArray = [0,10,25];
+      var timeArray = [0,10,25]
       // Sensor 1
-      var temp1Array = [25,30,40];
+      var temp1Array = [25,30,40]
       // Sensor 2
-      var temp2Array = [10,45,35];
+      var temp2Array = [10,45,35]
       // Sensor 3
-      var temp3Array = [35,15,45];
+      var temp3Array = [35,15,45]
       // Sensor 4
-      var temp4Array = [30,49,31];
+      var temp4Array = [30,49,31]
       // Sensor 5
-      var temp5Array = [28,42,50];
+      var temp5Array = [28,42,50]
+      //SMHI??
+      var tempSArray = [2,12,-1]
 
       // Define Data
       var data = [
@@ -43,24 +45,27 @@
         line: {color: 'rgb(255,0,0)', width: 3}, name:"Sensor 1"},
 
         {x: timeArray, y: temp2Array, mode:"lines+markers", 
-        line: {color: 'rgb(255,0,0)', width: 3}, name:"Sensor 2"},
+        line: {color: 'rgb(0,255,0)', width: 3}, name:"Sensor 2"},
 
         {x: timeArray, y: temp3Array, mode:"lines+markers", 
-        line: {color: 'rgb(255,0,0)', width: 3}, name:"Sensor 3"},
+        line: {color: 'rgb(0,0,255)', width: 3}, name:"Sensor 3"},
 
         {x: timeArray, y: temp4Array, mode:"lines+markers", 
-        line: {color: 'rgb(255,0,0)', width: 3}, name:"Sensor 4"},
+        line: {color: 'rgb(0,255,255)', width: 3}, name:"Sensor 4"},
 
         {x: timeArray, y: temp5Array, mode:"lines+markers", 
-        line: {color: 'rgb(255,0,0)', width: 3}, name:"Sensor 5"}
-      ];
+        line: {color: 'rgb(255,255,0)', width: 3}, name:"Sensor 5"},
+
+        {x: timeArray, y: tempSArray, mode:"lines+markers", 
+        line: {color: 'rgb(0,0,0)', width: 3}, name:"SMHI"}
+      ]
 
       // Define Layout
       var layout = {
         xaxis: {range: [a, b], title: "Time (Hours)"},
         yaxis: {range: [0, 50], title: "Temperature (°C)"},  
         title: "Temperature"
-      };
+      }
 
       // Display using Plotly
       Plotly.newPlot("myPlot", data, layout);
