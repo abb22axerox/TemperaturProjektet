@@ -3,75 +3,102 @@
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <body>
 
-<div id="myPlot" style="width:100%;max-width:700px"></div>
+  <div id="myPlot" style="width:100%;max-width:700px"></div>
 
-  <form>
-    <label for="fname"><strong>Start Time:</strong></label>
-    <br>
-    <input type="text" id="startTime" value="">
-    <br>
-    <label for="fname"><strong>Stop Time:</strong></label>
-    <br>
-    <input type="text" id="stopTime" value="">
-    <input type="reset" value="Reset">
-    <button type="button" onclick="timeFunction()">Show</button>
-  </form>
+    <form>
+      <label for="fname"><strong>Start Time:</strong></label>
+      <br>
+      <input type="text" id="startTime" value="">
+      <br>
+      <label for="fname"><strong>Stop Time:</strong></label>
+      <br>
+      <input type="text" id="stopTime" value="">
+      <input type="reset" value="Reset">
+      <button type="button" onclick="timeFunction()">Show</button>
+    </form>
 
-  <script>
-    let a = 0
-    let b = 0
+    <button onclick="showSensor1()">ShowS1</button>
+    <button onclick="showSensor2()">ShowS2</button>
+    <button onclick="showSensor3()">ShowS3</button>
+    <button onclick="showSensor4()">ShowS4</button>
+    <button onclick="showSensor5()">ShowS5</button>
+    <button onclick="showSensorS()">ShowSS</button>
 
-    function timeFunction() {
-      a = Number(document.getElementById("startTime").value)
-      b = Number(document.getElementById("stopTime").value)
-      
+    <script>
+      var a = 0
+      var b = 0
+
       var timeArray = [0,10,25]
       // Sensor 1
-      var temp1Array = [25,30,40]
+      var temp1Array = [0]
       // Sensor 2
-      var temp2Array = [10,45,35]
+      var temp2Array = [0]
       // Sensor 3
-      var temp3Array = [35,15,45]
+      var temp3Array = [0]
       // Sensor 4
-      var temp4Array = [30,49,31]
+      var temp4Array = [0]
       // Sensor 5
-      var temp5Array = [28,42,50]
+      var temp5Array = [0]
       //SMHI??
-      var tempSArray = [2,12,-1]
+      var tempSArray = [0]
 
-      // Define Data
-      var data = [
-        {x: timeArray, y: temp1Array, mode:"lines+markers", 
-        line: {color: 'rgb(255,0,0)', width: 3}, name:"Sensor 1"},
-
-        {x: timeArray, y: temp2Array, mode:"lines+markers", 
-        line: {color: 'rgb(0,255,0)', width: 3}, name:"Sensor 2"},
-
-        {x: timeArray, y: temp3Array, mode:"lines+markers", 
-        line: {color: 'rgb(0,0,255)', width: 3}, name:"Sensor 3"},
-
-        {x: timeArray, y: temp4Array, mode:"lines+markers", 
-        line: {color: 'rgb(0,255,255)', width: 3}, name:"Sensor 4"},
-
-        {x: timeArray, y: temp5Array, mode:"lines+markers", 
-        line: {color: 'rgb(255,255,0)', width: 3}, name:"Sensor 5"},
-
-        {x: timeArray, y: tempSArray, mode:"lines+markers", 
-        line: {color: 'rgb(0,0,0)', width: 3}, name:"SMHI"}
-      ]
-
-      // Define Layout
-      var layout = {
-        xaxis: {range: [a, b], title: "Time (Hours)"},
-        yaxis: {range: [0, 50], title: "Temperature (°C)"},  
-        title: "Temperature"
+      function showSensor1(){
+        temp1Array = [8,19,44]
+      }
+      function showSensor2(){
+        temp2Array = [10,45,35]
+      }
+      function showSensor3(){
+        temp3Array = [35,15,45]
+      }
+      function showSensor4(){
+        temp4Array = [30,49,31]
+      }
+      function showSensor5(){
+        temp5Array = [28,42,50]
+      }
+      function showSensorS(){
+        tempSArray = [2,12,-1]
       }
 
-      // Display using Plotly
-      Plotly.newPlot("myPlot", data, layout);
-    }
+      function timeFunction() {
+        a = Number(document.getElementById("startTime").value)
+        b = Number(document.getElementById("stopTime").value)
 
-    // Axel Roxenborg
-  </script>
+        // Define Data
+        var data = [
+          {x: timeArray, y: temp1Array, mode:"lines+markers", 
+          line: {color: 'rgb(255,0,0)', width: 3}, name:"Sensor 1"},
+
+          {x: timeArray, y: temp2Array, mode:"lines+markers", 
+          line: {color: 'rgb(0,255,0)', width: 3}, name:"Sensor 2"},
+
+          {x: timeArray, y: temp3Array, mode:"lines+markers", 
+          line: {color: 'rgb(0,0,255)', width: 3}, name:"Sensor 3"},
+
+          {x: timeArray, y: temp4Array, mode:"lines+markers", 
+          line: {color: 'rgb(0,255,255)', width: 3}, name:"Sensor 4"},
+
+          {x: timeArray, y: temp5Array, mode:"lines+markers", 
+          line: {color: 'rgb(255,255,0)', width: 3}, name:"Sensor 5"},
+
+          {x: timeArray, y: tempSArray, mode:"lines+markers", 
+          line: {color: 'rgb(0,0,0)', width: 3}, name:"SMHI"}
+        ]
+
+        // Define Layout
+        var layout = {
+          xaxis: {range: [a, b], title: "Time (Hours)"},
+          yaxis: {range: [0, 50], title: "Temperature (°C)"},  
+          title: "Temperature"
+        }
+
+        // Display using Plotly
+        Plotly.newPlot("myPlot", data, layout);
+      }
+
+      // Axel Roxenborg
+    </script>
+  </div>
 </body>
 </html>
