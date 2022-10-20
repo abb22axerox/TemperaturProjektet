@@ -17,12 +17,27 @@
       <button type="button" onclick="timeFunction()">Show</button>
     </form>
 
+    <!-- ShowButtons -->
     <button onclick="showSensor1()">ShowS1</button>
     <button onclick="showSensor2()">ShowS2</button>
     <button onclick="showSensor3()">ShowS3</button>
     <button onclick="showSensor4()">ShowS4</button>
     <button onclick="showSensor5()">ShowS5</button>
     <button onclick="showSensorS()">ShowSS</button>
+
+    <!-- HideButtons -->
+    <button onclick="hideSensor1()">HideS1</button>
+    <button onclick="hideSensor2()">HideS2</button>
+    <button onclick="hideSensor3()">HideS3</button>
+    <button onclick="hideSensor4()">HideS4</button>
+    <button onclick="hideSensor5()">HideS5</button>
+    <button onclick="hideSensorS()">HideSS</button>
+
+    <!-- ShowAllButton -->
+    <button onclick="showAll()">ShowAll</button>
+
+    <!-- HideAllButton -->
+    <button onclick="hideAll()">HideAll</button>
 
     <script>
       var a = 0
@@ -42,6 +57,7 @@
       //SMHI??
       var tempSArray = [0]
 
+      //ShowButtons
       function showSensor1(){
         temp1Array = [8,19,44]
       }
@@ -59,6 +75,46 @@
       }
       function showSensorS(){
         tempSArray = [2,12,-1]
+      }
+
+      //HideButtons
+      function hideSensor1(){
+        temp1Array = [0]
+      }
+      function hideSensor2(){
+        temp2Array = [0]
+      }
+      function hideSensor3(){
+        temp3Array = [0]
+      }
+      function hideSensor4(){
+        temp4Array = [0]
+      }
+      function hideSensor5(){
+        temp5Array = [0]
+      }
+      function hideSensorS(){
+        tempSArray = [0]
+      }
+
+      //ShowAll
+      function showAll(){
+        temp1Array = [8,19,44]
+        temp2Array = [10,45,35]
+        temp3Array = [35,15,45]
+        temp4Array = [30,49,31]
+        temp5Array = [28,42,50]
+        tempSArray = [2,12,-1]
+      }
+
+      //HideAll
+      function hideAll(){
+        temp1Array = [0]
+        temp2Array = [0]
+        temp3Array = [0]
+        temp4Array = [0]
+        temp5Array = [0]
+        tempSArray = [0]
       }
 
       function timeFunction() {
