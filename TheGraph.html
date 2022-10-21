@@ -1,45 +1,86 @@
 <!DOCTYPE html>
 <html>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<link rel="stylesheet" href="TheGraph.css">
 <body>
+  <button onclick="tempFunction()">Temperature</button>
+  <div id="myPlot" style="width:100%;max-width:700px"></div>
+    <form>
+      <label for="fname"><strong>Start Time:</strong></label>
+      <br>
+      <input type="text" id="startTime" value="">
+      <br>
+      <label for="fname"><strong>Stop Time:</strong></label>
+      <br>
+      <input type="text" id="stopTime" value="">
+      <input type="reset" value="Reset">
+    </form>
 
-<div id="myPlot" style="width:100%;max-width:700px"></div>
+    <!-- Show/Hide Buttons Temperature-->
+    <label class="switch">
+      <input type="checkbox" id="S1">
+      <span class="slider"></span>
+    </label>
 
-<!-- <form id="time">
-  <input type="text">
-  <input type="text">
-  <button onclick="formFunction()">Try it</button>
-  <input type="reset">
-</form> -->
+    <label class="switch">
+      <input type="checkbox" id="S2">
+      <span class="slider"></span>
+    </label>
 
-<input type="text" id="myText" value="">
-<button type="button" onclick="myFunction()">Show</button>
+    <label class="switch">
+      <input type="checkbox" id="S3">
+      <span class="slider"></span>
+    </label>
 
+    <label class="switch">
+      <input type="checkbox" id="S4">
+      <span class="slider"></span>
+    </label>
 
-  <script>
-    function myFunction() {
-      console.log(Number(document.getElementById("myText").value)) 
-    }
+    <label class="switch">
+      <input type="checkbox" id="S5">
+      <span class="slider"></span>
+    </label>
 
-    var xArray = [1,2];
-    var yArray = [25,30,30,30,40,20,20,50];
+    <label class="switch">
+      <input type="checkbox" id="SS">
+      <span class="slider"></span>
+    </label>
 
-    // Define Data
-    var data = [{
-      x: xArray,
-      y: yArray,
-      mode:"lines"
-    }];
+    <br>
 
-    // Define Layout
-    var layout = {
-      xaxis: {range: [1, 30], title: "Time (Minutes)"},
-      yaxis: {range: [0, 50], title: "Temperature (°C)"},  
-      title: "Temperature"
-    };
+    <!-- Show/Hide Buttons Humidity-->
+    <label class="switch">
+      <input type="checkbox" id="S1H">
+      <span class="slider"></span>
+    </label>
 
-    // Display using Plotly
-    Plotly.newPlot("myPlot", data, layout);
-  </script>
+    <label class="switch">
+      <input type="checkbox" id="S2H">
+      <span class="slider"></span>
+    </label>
+
+    <label class="switch">
+      <input type="checkbox" id="S3H">
+      <span class="slider"></span>
+    </label>
+
+    <label class="switch">
+      <input type="checkbox" id="S4H">
+      <span class="slider"></span>
+    </label>
+
+    <label class="switch">
+      <input type="checkbox" id="S5H">
+      <span class="slider"></span>
+    </label>
+
+    <label class="switch">
+      <input type="checkbox" id="SSH">
+      <span class="slider"></span>
+    </label>
+  </div>
+  <script src="TheGraph(Temp).js"></script>
+  <!-- <script src="TheGraph(Hum).js"></script> -->
 </body>
 </html>
