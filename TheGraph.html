@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<link rel="stylesheet" href="TheGraph.css">
 <body>
-
   <div id="myPlot" style="width:100%;max-width:700px"></div>
-
     <form>
       <label for="fname"><strong>Start Time:</strong></label>
       <br>
@@ -14,149 +13,40 @@
       <br>
       <input type="text" id="stopTime" value="">
       <input type="reset" value="Reset">
-      <button type="button" onclick="timeFunction()">Show</button>
+      <button type="button" onclick="graphFunction()">Show</button>
     </form>
 
-    <!-- ShowButtons -->
-    <button onclick="showSensor1()">ShowS1</button>
-    <button onclick="showSensor2()">ShowS2</button>
-    <button onclick="showSensor3()">ShowS3</button>
-    <button onclick="showSensor4()">ShowS4</button>
-    <button onclick="showSensor5()">ShowS5</button>
-    <button onclick="showSensorS()">ShowSS</button>
+    <!-- Show/Hide Buttons -->
+    <label class="switch">
+      <input type="checkbox" id="S1">
+      <span class="slider"></span>
+    </label>
 
-    <!-- HideButtons -->
-    <button onclick="hideSensor1()">HideS1</button>
-    <button onclick="hideSensor2()">HideS2</button>
-    <button onclick="hideSensor3()">HideS3</button>
-    <button onclick="hideSensor4()">HideS4</button>
-    <button onclick="hideSensor5()">HideS5</button>
-    <button onclick="hideSensorS()">HideSS</button>
+    <label class="switch">
+      <input type="checkbox" id="S2">
+      <span class="slider"></span>
+    </label>
 
-    <!-- ShowAllButton -->
-    <button onclick="showAll()">ShowAll</button>
+    <label class="switch">
+      <input type="checkbox" id="S3">
+      <span class="slider"></span>
+    </label>
 
-    <!-- HideAllButton -->
-    <button onclick="hideAll()">HideAll</button>
+    <label class="switch">
+      <input type="checkbox" id="S4">
+      <span class="slider"></span>
+    </label>
 
-    <script>
-      var a = 0
-      var b = 0
+    <label class="switch">
+      <input type="checkbox" id="S5">
+      <span class="slider"></span>
+    </label>
 
-      var timeArray = [0,10,25]
-      // Sensor 1
-      var temp1Array = [0]
-      // Sensor 2
-      var temp2Array = [0]
-      // Sensor 3
-      var temp3Array = [0]
-      // Sensor 4
-      var temp4Array = [0]
-      // Sensor 5
-      var temp5Array = [0]
-      //SMHI??
-      var tempSArray = [0]
-
-      //ShowButtons
-      function showSensor1(){
-        timeFunction()
-        temp1Array = [8,19,44]
-      }
-      function showSensor2(){
-        temp2Array = [10,45,35]
-      }
-      function showSensor3(){
-        temp3Array = [35,15,45]
-      }
-      function showSensor4(){
-        temp4Array = [30,49,31]
-      }
-      function showSensor5(){
-        temp5Array = [28,42,50]
-      }
-      function showSensorS(){
-        tempSArray = [2,12,-1]
-      }
-
-      //HideButtons
-      function hideSensor1(){
-        timeFunction()
-        temp1Array = [0]
-      }
-      function hideSensor2(){
-        temp2Array = [0]
-      }
-      function hideSensor3(){
-        temp3Array = [0]
-      }
-      function hideSensor4(){
-        temp4Array = [0]
-      }
-      function hideSensor5(){
-        temp5Array = [0]
-      }
-      function hideSensorS(){
-        tempSArray = [0]
-      }
-
-      //ShowAll
-      function showAll(){
-        temp1Array = [8,19,44]
-        temp2Array = [10,45,35]
-        temp3Array = [35,15,45]
-        temp4Array = [30,49,31]
-        temp5Array = [28,42,50]
-        tempSArray = [2,12,-1]
-      }
-
-      //HideAll
-      function hideAll(){
-        temp1Array = [0]
-        temp2Array = [0]
-        temp3Array = [0]
-        temp4Array = [0]
-        temp5Array = [0]
-        tempSArray = [0]
-      }
-
-      function timeFunction() {
-        a = Number(document.getElementById("startTime").value)
-        b = Number(document.getElementById("stopTime").value)
-
-        // Define Data
-        var data = [
-          {x: timeArray, y: temp1Array, mode:"lines+markers", 
-          line: {color: 'rgb(255,0,0)', width: 3}, name:"Sensor 1"},
-
-          {x: timeArray, y: temp2Array, mode:"lines+markers", 
-          line: {color: 'rgb(0,255,0)', width: 3}, name:"Sensor 2"},
-
-          {x: timeArray, y: temp3Array, mode:"lines+markers", 
-          line: {color: 'rgb(0,0,255)', width: 3}, name:"Sensor 3"},
-
-          {x: timeArray, y: temp4Array, mode:"lines+markers", 
-          line: {color: 'rgb(0,255,255)', width: 3}, name:"Sensor 4"},
-
-          {x: timeArray, y: temp5Array, mode:"lines+markers", 
-          line: {color: 'rgb(255,255,0)', width: 3}, name:"Sensor 5"},
-
-          {x: timeArray, y: tempSArray, mode:"lines+markers", 
-          line: {color: 'rgb(0,0,0)', width: 3}, name:"SMHI"}
-        ]
-
-        // Define Layout
-        var layout = {
-          xaxis: {range: [a, b], title: "Time (Hours)"},
-          yaxis: {range: [0, 50], title: "Temperature (°C)"},  
-          title: "Temperature"
-        }
-
-        // Display using Plotly
-        Plotly.newPlot("myPlot", data, layout);
-      }
-
-      // Axel Roxenborg
-    </script>
+    <label class="switch">
+      <input type="checkbox" id="SS">
+      <span class="slider"></span>
+    </label>
   </div>
+  <script src="TheGraph.js"></script>
 </body>
 </html>
