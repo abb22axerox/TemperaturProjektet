@@ -105,7 +105,6 @@ sensorS.addEventListener('change', function () {
 })
 })
 
-
 function graphFunction() {
   // Define Data
   var data = [
