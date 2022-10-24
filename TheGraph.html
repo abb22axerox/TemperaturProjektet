@@ -2,21 +2,31 @@
 <html>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <link rel="stylesheet" href="TheGraph.css">
-<body>
-  <button onclick="tempFunction()">Temperature</button>
-  <button onclick="humFunction()">Humidity</button>
-  <div id="myPlot" style="width:100%;max-width:700px"></div>
-    <form>
+<link rel="stylesheet" href="Website.css">
+<body><div id="body">
+    <div id="graphSwitcher">
+  <button class="button" style="background-color: red;" onclick="tempFunction()"><strong>Temperature</strong></button>
+  <button class="button" style="background-color: #1f64da;" onclick="humFunction()"><strong>Humidity</strong></button>
+    </div>
+    <div class="filler1"></div><div class="filler1"></div>
+      <div id="centre">
+  <div id="myPlot"></div>
+    <form id="time">
+        <div id="startTimeDiv">
       <label for="fname"><strong>Start Time:</strong></label>
       <br>
       <input type="text" id="startTime" value="">
+        </div>
       <br>
+        <div id="stopTimeDiv">
       <label for="fname"><strong>Stop Time:</strong></label>
       <br>
       <input type="text" id="stopTime" value="">
+        </div>
       <input type="reset" value="Reset">
     </form>
 
+      <div id="buttons">
     <!-- Show/Hide Buttons Temperature-->
     <label class="switch">
       <input type="checkbox" id="S1">
@@ -47,6 +57,41 @@
       <input type="checkbox" id="SS">
       <span class="slider"></span>
     </label>
+
+    <br>
+
+    <!-- Show/Hide Buttons Humidity-->
+    <label class="switch">
+      <input type="checkbox" id="S1H">
+      <span class="slider"></span>
+    </label>
+
+    <label class="switch">
+      <input type="checkbox" id="S2H">
+      <span class="slider"></span>
+    </label>
+
+    <label class="switch">
+      <input type="checkbox" id="S3H">
+      <span class="slider"></span>
+    </label>
+
+    <label class="switch">
+      <input type="checkbox" id="S4H">
+      <span class="slider"></span>
+    </label>
+
+    <label class="switch">
+      <input type="checkbox" id="S5H">
+      <span class="slider"></span>
+    </label>
+
+    <label class="switch">
+      <input type="checkbox" id="SSH">
+      <span class="slider"></span>
+    </label>
+  </div>
   <script src="TheGraph(Temp).js"></script>
+  <!-- <script src="TheGraph(Hum).js"></script> -->
 </body>
 </html>
