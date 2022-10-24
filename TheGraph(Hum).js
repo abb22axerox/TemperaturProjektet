@@ -1,5 +1,5 @@
-var a = 0
-var b = 0
+var a2 = 0
+var b2 = 0
 
 var timeArray = [0,10,25]
 
@@ -17,7 +17,8 @@ var timeArray = [0,10,25]
   //SMHI??
   var humSArray = [0]
 
-//Humidity
+// function humFunction(){
+  //Humidity
   //Sensor 1
   document.addEventListener('DOMContentLoaded', function () {
     var sensorH1 = document.querySelector('input[id="S1H"]')
@@ -25,10 +26,10 @@ var timeArray = [0,10,25]
     sensorH1.addEventListener('change', function () {
       if (sensorH1.checked) {
         hum1Array = [18,10,3]
-        graphFunction()
+        humFunctionL()
       } else {
         hum1Array = [0]
-        graphFunction()
+        humFunctionL()
       }
     })
     })
@@ -40,10 +41,10 @@ var timeArray = [0,10,25]
     sensorH2.addEventListener('change', function () {
       if (sensorH2.checked) {
         hum2Array = [4,30,20]
-        graphFunction()
+        humFunctionL()
       } else {
         hum2Array = [0]
-        graphFunction()
+        humFunctionL()
       }
     })
     })
@@ -55,10 +56,10 @@ var timeArray = [0,10,25]
     sensorH3.addEventListener('change', function () {
       if (sensorH3.checked) {
         hum3Array = [30,14,6]
-        graphFunction()
+        humFunctionL()
       } else {
         hum3Array = [0]
-        graphFunction()
+        humFunctionL()
       }
     })
     })
@@ -70,10 +71,10 @@ var timeArray = [0,10,25]
     sensorH4.addEventListener('change', function () {
       if (sensorH4.checked) {
         hum4Array = [15,26,41]
-        graphFunction()
+        humFunctionL()
       } else {
         hum4Array = [0]
-        graphFunction()
+        humFunctionL()
       }
     })
     })
@@ -85,10 +86,10 @@ var timeArray = [0,10,25]
     sensorH5.addEventListener('change', function () {
       if (sensorH5.checked) {
         hum5Array = [7,18,7]
-        graphFunction()
+        humFunctionL()
       } else {
         hum5Array = [0]
-        graphFunction()
+        humFunctionL()
       }
     })
     })
@@ -100,15 +101,15 @@ var timeArray = [0,10,25]
     sensorHS.addEventListener('change', function () {
       if (sensorHS.checked) {
         humSArray = [1,2,1]
-        graphFunction()
+        humFunctionL()
       } else {
         humSArray = [0]
-        graphFunction()
+        humFunctionL()
       }
     })
     })
 
-function graphFunction() {
+  function humFunctionL() {
     // Define Data
     var data = [
         //Humidity
@@ -131,12 +132,12 @@ function graphFunction() {
         line: {color: 'rgb(0,0,0)', width: 3}, name:"SMHI Hum"}
     ]
     
-    a = Number(document.getElementById("startTime").value)
-    b = Number(document.getElementById("stopTime").value)
+    a2 = Number(document.getElementById("startTime").value)
+    b2 = Number(document.getElementById("stopTime").value)
 
     // Define Layout
     var layout = {
-        xaxis: {range: [a, b], title: "Time (Hours)"},
+        xaxis: {range: [a2, b2], title: "Time (Hours)"},
         yaxis: {range: [0, 50], title: "Humidity (%)"},  
         title: "Humidity"
     }
@@ -144,5 +145,5 @@ function graphFunction() {
     // Display using Plotly
     Plotly.newPlot("myPlot", data, layout)
     }
-    
+  // }
     // Axel Roxenborg
