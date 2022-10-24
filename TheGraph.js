@@ -19,20 +19,19 @@ var timeArray = [0,10,25]
   //SMHI??
   var tempSArray = [0]
 
-  //Humidity
-    //Sensor 1
-    var hum1Array = [0]
-    // Sensor 2
-    var hum2Array = [0]
-    // Sensor 3
-    var hum3Array = [0]
-    // Sensor 4
-    var hum4Array = [0]
-    // Sensor 5
-    var hum5Array = [0]
-    //SMHI??
-    var humSArray = [0]
-
+//Humidity
+  //Sensor 1
+  var hum1Array = [0]
+  // Sensor 2
+  var hum2Array = [0]
+  // Sensor 3
+  var hum3Array = [0]
+  // Sensor 4
+  var hum4Array = [0]
+  // Sensor 5
+  var hum5Array = [0]
+  //SMHI??
+  var humSArray = [0]
 
   var chosen = 0
 
