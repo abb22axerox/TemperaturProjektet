@@ -36,51 +36,39 @@ var timeArray = [0,10,25]
   var chosen = 0
 
   function tempFunction(){
+    temp1Array = [0]
+    temp2Array = [0]
+    temp3Array = [0]
+    temp4Array = [0]
+    temp5Array = [0]
+    tempSArray = [0]
     chosen = 1
     graphFunction()
-    console.log(chosen)
-
-    // Uncheck
-    document.getElementById("checkbox").checked = false;
-    
-    // hum1Array = [0]
-    // hum2Array = [0]
-    // hum3Array = [0]
-    // hum4Array = [0]
-    // hum5Array = [0]
-    // humSArray = [0]
-
-    // temp1Array = [0]
-    // temp2Array = [0]
-    // temp3Array = [0]
-    // temp4Array = [0]
-    // temp5Array = [0]
-    // tempSArray = [0]
+    document.getElementById(id="S1").checked = false;
+    document.getElementById(id="S2").checked = false;
+    document.getElementById(id="S3").checked = false;
+    document.getElementById(id="S4").checked = false;
+    document.getElementById(id="S5").checked = false;
+    document.getElementById(id="SS").checked = false;
   }
   function humFunction(){
+    hum1Array = [0]
+    hum2Array = [0]
+    hum3Array = [0]
+    hum4Array = [0]
+    hum5Array = [0]
+    humSArray = [0]
     chosen = 2
     graphFunction()
-    console.log(chosen)
-
-    // Uncheck
-    document.getElementById("checkbox").checked = false;
-
-    // hum1Array = [0]
-    // hum2Array = [0]
-    // hum3Array = [0]
-    // hum4Array = [0]
-    // hum5Array = [0]
-    // humSArray = [0]
-
-    // temp1Array = [0]
-    // temp2Array = [0]
-    // temp3Array = [0]
-    // temp4Array = [0]
-    // temp5Array = [0]
-    // tempSArray = [0]
+    document.getElementById(id="S1").checked = false;
+    document.getElementById(id="S2").checked = false;
+    document.getElementById(id="S3").checked = false;
+    document.getElementById(id="S4").checked = false;
+    document.getElementById(id="S5").checked = false;
+    document.getElementById(id="SS").checked = false;
   }
 
-//Temperature
+  //Temperature
   //Sensor 1
   document.addEventListener('DOMContentLoaded', function () {
   var sensor1 = document.querySelector('input[id="S1"]')
@@ -228,6 +216,7 @@ var timeArray = [0,10,25]
 
 function graphFunction() {
   // Define Data
+  if (chosen == 1){
   var data = [
     //Temperature
     {x: timeArray, y: temp1Array, mode:"lines+markers", 
@@ -246,8 +235,11 @@ function graphFunction() {
     line: {color: 'rgb(255,255,0)', width: 3}, name:"Sensor 5 Temp"},
 
     {x: timeArray, y: tempSArray, mode:"lines+markers", 
-    line: {color: 'rgb(0,0,0)', width: 3}, name:"SMHI Temp"},
+    line: {color: 'rgb(0,0,0)', width: 3}, name:"SMHI Temp"}
+  ]}
 
+  if(chosen == 2){
+    data = [
     //Humidity
     {x: timeArray, y: hum1Array, mode:"lines+markers", 
     line: {color: 'rgb(255,0,0)', width: 3}, name:"Sensor 1 Hum"},
@@ -266,7 +258,7 @@ function graphFunction() {
 
     {x: timeArray, y: humSArray, mode:"lines+markers", 
     line: {color: 'rgb(0,0,0)', width: 3}, name:"SMHI Hum"}
-  ]
+  ]}
 
   a = Number(document.getElementById("startTime").value)
   b = Number(document.getElementById("stopTime").value)
