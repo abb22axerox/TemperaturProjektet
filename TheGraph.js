@@ -1,5 +1,6 @@
 graphFunction()
 
+//Define varibles for temperature and humidity arrays
 var a = 0
 var b = 0
 
@@ -36,6 +37,7 @@ var timeArray = [0,10,25]
   var chosen = 0
 
   function tempFunction(){
+    //Initialize temp arrays to 0
     temp1Array = [0]
     temp2Array = [0]
     temp3Array = [0]
@@ -44,14 +46,17 @@ var timeArray = [0,10,25]
     tempSArray = [0]
     chosen = 1
     graphFunction()
+    //Reset checkboxes
     document.getElementById(id="S1").checked = false;
     document.getElementById(id="S2").checked = false;
     document.getElementById(id="S3").checked = false;
     document.getElementById(id="S4").checked = false;
     document.getElementById(id="S5").checked = false;
-    document.getElementById(id="SS").checked = false;
+    document.getElementById(id="SMHI").checked = false;
   }
+  
   function humFunction(){
+    //Initialize hum arrays to 0
     hum1Array = [0]
     hum2Array = [0]
     hum3Array = [0]
@@ -60,15 +65,19 @@ var timeArray = [0,10,25]
     humSArray = [0]
     chosen = 2
     graphFunction()
+    //Reset checkboxes
     document.getElementById(id="S1").checked = false;
     document.getElementById(id="S2").checked = false;
     document.getElementById(id="S3").checked = false;
     document.getElementById(id="S4").checked = false;
     document.getElementById(id="S5").checked = false;
-    document.getElementById(id="SS").checked = false;
+    document.getElementById(id="SMHI").checked = false;
   }
 
-  //Temperature
+  //Display a trace in the graph if temperature (chosen = 1) or humidity (chosen = 2) 
+  //button is selcted and a selected checkbox = true. Below is 6 checkboxes 
+  //
+  //Temperature checkboxes
   //Sensor 1
   document.addEventListener('DOMContentLoaded', function () {
   var sensor1 = document.querySelector('input[id="S1"]')
@@ -191,7 +200,7 @@ var timeArray = [0,10,25]
 
   //SMHI??
   document.addEventListener('DOMContentLoaded', function () {
-    var sensorS = document.querySelector('input[id="SS"]')
+    var sensorS = document.querySelector('input[id="SMHI"]')
 
     sensorS.addEventListener('change', function () {
       if (sensorS.checked) {
@@ -213,7 +222,8 @@ var timeArray = [0,10,25]
     })
     })
 
-
+//The graph function plots the traces. It can make them in different colours.
+//Each trace gets a label name per sensor. 
 function graphFunction() {
   // Define Data
   if (chosen == 1){
@@ -264,6 +274,7 @@ function graphFunction() {
   b = Number(document.getElementById("stopTime").value)
 
   // Define Layout
+  //Defines the name of the axis, temp, hum, time, titles
   if (chosen == 1){
     var layout = {
       xaxis: {range: [a, b], title: "Time (Hours)"},
@@ -282,6 +293,4 @@ function graphFunction() {
   // Display using Plotly
   Plotly.newPlot("myPlot", data, layout)
 }
-
-
 // Axel Roxenborg
