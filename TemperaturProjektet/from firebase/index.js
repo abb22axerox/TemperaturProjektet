@@ -1,13 +1,13 @@
 // Your web app's Firebase configuration
 
 const firebaseConfig = {
-    apiKey: "AIzaSyC1Z3eWF5XuyBvX8XPetVs76hy5osSA6KM",
-    authDomain: "skogens-thm.firebaseapp.com",
-    databaseURL: "https://skogens-thm-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "skogens-thm",
-    storageBucket: "skogens-thm.appspot.com",
-    messagingSenderId: "666647829702",
-    appId: "1:666647829702:web:ecefb34b3c3dda0b5b0bc7"
+    apiKey: "AIzaSyDzJMZg8uoitcrbyop9PPu5aQpuw2ja38Q",
+    authDomain: "test-7552f.firebaseapp.com",
+    databaseURL: "https://test-7552f-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "test-7552f",
+    storageBucket: "test-7552f.appspot.com",
+    messagingSenderId: "107856682690",
+    appId: "1:107856682690:web:599547b5814614132be55b"
   };
 
 // Initialize Firebase
