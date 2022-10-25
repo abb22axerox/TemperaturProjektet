@@ -6,7 +6,7 @@ var b = 0
 
 var timeArray = [0,10,25]
 
-console.log(timeList)
+// console.log(timeList)
 
 //Temperature
   // Sensor 1
@@ -94,6 +94,10 @@ console.log(timeList)
         hum1Array = [4,30,20]
         graphFunction()
       }
+      if(chosen == 0){
+        alert("Please press the Temperature/Humidity button first")
+        document.getElementById(id="S1").checked = false;
+      }
     } else{
       temp1Array = [0]
       graphFunction()
@@ -117,6 +121,10 @@ console.log(timeList)
         if(chosen == 2){
           hum2Array = [40,28,18]
           graphFunction()
+        }
+        if(chosen == 0){
+          alert("Please press the Temperature/Humidity button first")
+          document.getElementById(id="S2").checked = false;
         }
       } else{
         temp2Array = [0]
@@ -142,6 +150,10 @@ console.log(timeList)
           hum3Array = [4,30,20]
           graphFunction()
         }
+        if(chosen == 0){
+          alert("Please press the Temperature/Humidity button first")
+          document.getElementById(id="S3").checked = false;
+        }
       } else{
         temp3Array = [0]
         graphFunction()
@@ -166,6 +178,10 @@ console.log(timeList)
           hum4Array = [4,30,20]
           graphFunction()
         }
+        if(chosen == 0){
+          alert("Please press the Temperature/Humidity button first")
+          document.getElementById(id="S4").checked = false;
+        }
       } else{
         temp4Array = [0]
         graphFunction()
@@ -189,6 +205,10 @@ console.log(timeList)
         if(chosen == 2){
           hum5Array = [4,30,20]
           graphFunction()
+        }
+        if(chosen == 0){
+          alert("Please press the Temperature/Humidity button first")
+          document.getElementById(id="S5").checked = false;
         }
       } else{
         temp5Array = [0]
