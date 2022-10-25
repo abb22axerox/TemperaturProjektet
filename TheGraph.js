@@ -20,7 +20,7 @@ console.log(timeList)
   // Sensor 5
   var temp5Array = [0]
   //SMHI??
-  var tempSArray = [0]
+  // var tempSArray = [0]
 
 //Humidity
   //Sensor 1
@@ -34,7 +34,7 @@ console.log(timeList)
   // Sensor 5
   var hum5Array = [0]
   //SMHI??
-  var humSArray = [0]
+  // var humSArray = [0]
 
   var chosen = 0
 
@@ -45,7 +45,7 @@ console.log(timeList)
     temp3Array = [0]
     temp4Array = [0]
     temp5Array = [0]
-    tempSArray = [0]
+    // tempSArray = [0]
     chosen = 1
     graphFunction()
     //Reset checkboxes
@@ -54,7 +54,7 @@ console.log(timeList)
     document.getElementById(id="S3").checked = false;
     document.getElementById(id="S4").checked = false;
     document.getElementById(id="S5").checked = false;
-    document.getElementById(id="SMHI").checked = false;
+    // document.getElementById(id="SMHI").checked = false;
   }
   
   function humFunction(){
@@ -64,7 +64,7 @@ console.log(timeList)
     hum3Array = [0]
     hum4Array = [0]
     hum5Array = [0]
-    humSArray = [0]
+    // humSArray = [0]
     chosen = 2
     graphFunction()
     //Reset checkboxes
@@ -73,7 +73,7 @@ console.log(timeList)
     document.getElementById(id="S3").checked = false;
     document.getElementById(id="S4").checked = false;
     document.getElementById(id="S5").checked = false;
-    document.getElementById(id="SMHI").checked = false;
+    // document.getElementById(id="SMHI").checked = false;
   }
 
   //Display a trace in the graph if temperature (chosen = 1) or humidity (chosen = 2) 
@@ -201,28 +201,28 @@ console.log(timeList)
     })
 
   //SMHI??
-  document.addEventListener('DOMContentLoaded', function () {
-    var sensorS = document.querySelector('input[id="SMHI"]')
+  // document.addEventListener('DOMContentLoaded', function () {
+  //   var sensorS = document.querySelector('input[id="SMHI"]')
 
-    sensorS.addEventListener('change', function () {
-      if (sensorS.checked) {
-        if(chosen == 1){
-          tempSArray = [8,19,44]
-          graphFunction()
-        }
-        if(chosen == 2){
-          humSArray = [4,30,20]
-          graphFunction()
-        }
-      } else{
-        tempSArray = [0]
-        graphFunction()
+  //   sensorS.addEventListener('change', function () {
+  //     if (sensorS.checked) {
+  //       if(chosen == 1){
+  //         tempSArray = [8,19,44]
+  //         graphFunction()
+  //       }
+  //       if(chosen == 2){
+  //         humSArray = [4,30,20]
+  //         graphFunction()
+  //       }
+  //     } else{
+  //       tempSArray = [0]
+  //       graphFunction()
 
-        humSArray = [0]
-        graphFunction()
-      }
-    })
-    })
+  //       humSArray = [0]
+  //       graphFunction()
+  //     }
+  //   })
+  //   })
 
 //The graph function plots the traces. It can make them in different colours.
 //Each trace gets a label name per sensor. 
@@ -246,8 +246,8 @@ function graphFunction() {
     {x: timeArray, y: temp5Array, mode:"lines+markers", 
     line: {color: 'rgb(255,255,0)', width: 3}, name:"Sensor 5 Temp"},
 
-    {x: timeArray, y: tempSArray, mode:"lines+markers", 
-    line: {color: 'rgb(0,0,0)', width: 3}, name:"SMHI Temp"}
+    // {x: timeArray, y: tempSArray, mode:"lines+markers", 
+    // line: {color: 'rgb(0,0,0)', width: 3}, name:"SMHI Temp"}
   ]}
 
   if(chosen == 2){
@@ -268,8 +268,8 @@ function graphFunction() {
     {x: timeArray, y: hum5Array, mode:"lines+markers", 
     line: {color: 'rgb(255,255,0)', width: 3}, name:"Sensor 5 Hum"},
 
-    {x: timeArray, y: humSArray, mode:"lines+markers", 
-    line: {color: 'rgb(0,0,0)', width: 3}, name:"SMHI Hum"}
+    // {x: timeArray, y: humSArray, mode:"lines+markers", 
+    // line: {color: 'rgb(0,0,0)', width: 3}, name:"SMHI Hum"}
   ]}
 
   a = Number(document.getElementById("startTime").value)
