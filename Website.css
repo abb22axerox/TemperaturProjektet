@@ -10,7 +10,7 @@
 
 #centre {
     border: 5px yellow solid;
-    width: 1200px;
+    width: 75%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -20,12 +20,13 @@
 #myPlot {
     border: 5px black solid;
     margin-top: 25px;
-    width: 1000px;
+    width: 85%;
     height: 500px;
 }
 
 #timeDiv {
     background-color: green;
+    margin-top: 15px;
     width: fit-content;
     height: max-content;
     display: flex;
@@ -36,14 +37,14 @@
     background-color: blue;
     display: flex;   
     align-items: center;
-    font-size: 20px;
+    height: 50px;
 }
 
 #stopTimeDiv {
     background-color: red;
     display: flex;
     align-items: center;
-    font-size: 20px;
+    height: 50px;
 }
 
 #buttons {
@@ -54,7 +55,7 @@
 
 #graphSwitcherDiv {
     background-color: aquamarine;
-    width: 150px;
+    width: 10%;
     height: 800px;
     justify-self: flex-start;
 }
@@ -77,12 +78,12 @@
 
 .filler1 {
     background-color: azure;
-    width: 200px;
+    width: 15%;
     height: 800px;
 }
 
 .filler2 {
     background-color: aquamarine;
-    width: 150px;
+    width: 10%;
     height: 800px;
 }
