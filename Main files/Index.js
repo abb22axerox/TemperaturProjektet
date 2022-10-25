@@ -31,16 +31,11 @@ room2Ref.once("value").then((snapshot) => {
       IDKWhatToNameThis.push(tempTime[i].split(' '))
       // console.log(IDKWhatToNameThis)
       }
-  // console.log(IDKWhatToNameThis[0][1] + ' turtles eat toast')
   
-
-
   for(i=0; i < IDKWhatToNameThis.length; i++){
       timeList.push(IDKWhatToNameThis[i][0])
       // console.log(timeList)
   }
-
-
 
   for(i=0; i < IDKWhatToNameThis.length; i++){
       tempList.push(IDKWhatToNameThis[i][1])
