@@ -2,86 +2,73 @@
 <html>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <link rel="stylesheet" href="TheGraph.css">
-<body>
-  <button onclick="tempFunction()">Temperature</button>
-  <button onclick="humFunction()">Humidity</button>
-  <div id="myPlot" style="width:100%;max-width:700px"></div>
-    <form>
-      <label for="fname"><strong>Start Time:</strong></label>
-      <br>
-      <input type="text" id="startTime" value="">
-      <br>
-      <label for="fname"><strong>Stop Time:</strong></label>
-      <br>
-      <input type="text" id="stopTime" value="">
-      <input type="reset" value="Reset">
-    </form>
+<link rel="stylesheet" href="Website.css">
 
-    <!-- Show/Hide Buttons Temperature-->
-    <label class="switch">
-      <input type="checkbox" id="S1">
-      <span class="slider"></span>
-    </label>
+<body>  
+  <div id="body">
 
-    <label class="switch">
-      <input type="checkbox" id="S2">
-      <span class="slider"></span>
-    </label>
+    <div id="graphSwitcherDiv">
+      <button class="button" id="tempButton" onclick="tempFunction()"><strong>Temperature</strong></button>
+      <button class="button" id="humButton" onclick="humFunction()"><strong>Humidity</strong></button>
+    </div>
 
-    <label class="switch">
-      <input type="checkbox" id="S3">
-      <span class="slider"></span>
-    </label>
+    <div class="filler1"></div>
 
-    <label class="switch">
-      <input type="checkbox" id="S4">
-      <span class="slider"></span>
-    </label>
+    <div id="centre">
 
-    <label class="switch">
-      <input type="checkbox" id="S5">
-      <span class="slider"></span>
-    </label>
+      <div id="myPlot"></div>
+    
+      <form id="timeDiv">
+        <div id="startTimeDiv">
+          <label for="fname"><strong>Start Time:</strong></label>
+            <br>
+          <input type="text" id="startTime" value="">
+        </div>
+          <br>
+        <div id="stopTimeDiv">
+          <label for="fname"><strong>Stop Time:</strong></label>
+            <br>
+          <input type="text" id="stopTime" value="">
+        </div>
+          <input type="reset" value="Reset/Refresh" onclick="refreshFunction()">
+      </form>
 
-    <label class="switch">
+      <div id="buttons">
+        <!-- Show/Hide Buttons Temperature-->
+        <label class="switch">
+          <input type="checkbox" id="S1">
+          <span class="slider"></span>
+        </label>
+
+        <label class="switch">
+          <input type="checkbox" id="S2">
+          <span class="slider"></span>
+        </label>
+
+        <label class="switch">
+          <input type="checkbox" id="S3">
+          <span class="slider"></span>
+        </label>
+
+        <label class="switch">
+          <input type="checkbox" id="S4">
+          <span class="slider"></span>
+        </label>
+
+        <label class="switch">
+          <input type="checkbox" id="S5">
+          <span class="slider"></span>
+        </label>
+
+    <!-- <label class="switch">
       <input type="checkbox" id="SS">
       <span class="slider"></span>
-    </label>
-
-    <br>
-
-    <!-- Show/Hide Buttons Humidity-->
-    <label class="switch">
-      <input type="checkbox" id="S1H">
-      <span class="slider"></span>
-    </label>
-
-    <label class="switch">
-      <input type="checkbox" id="S2H">
-      <span class="slider"></span>
-    </label>
-
-    <label class="switch">
-      <input type="checkbox" id="S3H">
-      <span class="slider"></span>
-    </label>
-
-    <label class="switch">
-      <input type="checkbox" id="S4H">
-      <span class="slider"></span>
-    </label>
-
-    <label class="switch">
-      <input type="checkbox" id="S5H">
-      <span class="slider"></span>
-    </label>
-
-    <label class="switch">
-      <input type="checkbox" id="SSH">
-      <span class="slider"></span>
-    </label>
+    </label> -->
+      </div></div>
+    <div class="filler1"></div> <div class="filler1"></div> <div class="filler2"></div>
   </div>
-  <script src="TheGraph(Temp).js"></script>
-  <!-- <script src="TheGraph(Hum).js"></script> -->
+  <script src="TheGraph.js"></script>
+  <!-- <script src="index.js"></script> -->
+  <!-- <script src="test.js"></script> -->
 </body>
 </html>
