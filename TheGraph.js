@@ -1,3 +1,4 @@
+//Load the graph
 graphFunction()
 
 //Define varibles for temperature and humidity arrays
@@ -233,6 +234,10 @@ var timeArray = [0,10,25]
   //       if(chosen == 2){
   //         humSArray = [4,30,20]
   //         graphFunction()
+  //       }
+  //       if(chosen == 0){
+  //       alert("Please press the Temperature/Humidity button first")
+  //       document.getElementById(id="SS").checked = false;
   //       }
   //     } else{
   //       tempSArray = [0]
