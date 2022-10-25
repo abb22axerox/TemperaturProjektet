@@ -7,7 +7,7 @@ var b = 0
 
 var timeArray = [0,10,25]
 
-// console.log(timeList)
+console.log(timeList)
 
 //Temperature
   // Sensor 1
@@ -38,6 +38,10 @@ var timeArray = [0,10,25]
   // var humSArray = [0]
 
   var chosen = 0
+
+  function refreshFunction(){
+    graphFunction()
+  }
 
   function tempFunction(){
     //Initialize temp arrays to 0
