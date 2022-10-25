@@ -17,6 +17,9 @@ const db = firebase.database();
 
 var room2Ref = db.ref("rum2");
 
+let timeList = []
+let tempList = []
+
 room2Ref.once("value").then((snapshot) => {
     let r2r = snapshot.val()
     // console.log(r2r)
@@ -28,15 +31,12 @@ room2Ref.once("value").then((snapshot) => {
         // console.log(IDKWhatToNameThis)
         }
     // console.log(IDKWhatToNameThis[0][1] + ' turtles eat toast')
-    
-    let timeList = []
+
 
     for(i=0; i < IDKWhatToNameThis.length; i++){
         timeList.push(IDKWhatToNameThis[i][0])
         // console.log(timeList)
     }
-
-    let tempList = []
 
     for(i=0; i < IDKWhatToNameThis.length; i++){
         tempList.push(IDKWhatToNameThis[i][1])
