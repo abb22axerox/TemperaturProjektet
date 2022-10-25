@@ -1,16 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<link rel="stylesheet" href="TheGraph.css">
+<link rel="stylesheet" href="Website.css">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
-    <script src="test.js"></script>
-    
+
+<body><div id="body">
+    <div id="graphSwitcher">
+  <button class="button" style="background-color: red;" onclick="tempFunction()"><strong>Temperature</strong></button>
+  <button class="button" style="background-color: #1f64da;" onclick="humFunction()"><strong>Humidity</strong></button>
+    </div>
+    <div class="filler1"></div><div class="filler1"></div>
+      <div id="centre">
+  <div id="myPlot"></div>
+    <form id="time">
+        <div id="startTimeDiv">
+      <label for="fname"><strong>Start Time:</strong></label>
+      <br>
+      <input type="text" id="startTime" value="">
+        </div>
+      <br>
+        <div id="stopTimeDiv">
+      <label for="fname"><strong>Stop Time:</strong></label>
+      <br>
+      <input type="text" id="stopTime" value="">
+        </div>
+      <input type="reset" value="Reset/Refresh" onclick="refreshFunction()">
+    </form>
+
+      <div id="buttons">
+    <!-- Show/Hide Buttons Temperature-->
+    <label class="switch">
+      <input type="checkbox" id="S1">
+      <span class="slider"></span>
+    </label>
+
+    <label class="switch">
+      <input type="checkbox" id="S2">
+      <span class="slider"></span>
+    </label>
+
+    <label class="switch">
+      <input type="checkbox" id="S3">
+      <span class="slider"></span>
+    </label>
+
+    <label class="switch">
+      <input type="checkbox" id="S4">
+      <span class="slider"></span>
+    </label>
+
+    <label class="switch">
+      <input type="checkbox" id="S5">
+      <span class="slider"></span>
+    </label>
+
+    <!-- <label class="switch">
+      <input type="checkbox" id="SS">
+      <span class="slider"></span>
+    </label> -->
+      </div></div>
+    <div class="filler1"></div> <div class="filler1"></div> <div class="filler2"></div>
+  </div>
+  <!-- <script src="TheGraph.js"></script> -->
+  <!-- <script src="index.js"></script> -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+  <script src="test.js"></script>
 </body>
 </html>
