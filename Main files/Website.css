@@ -62,16 +62,16 @@
 
 #tempButton {
     background-color: red;
-    opacity: 0.7;
+    opacity: 1;
     border-radius: 8px;
     margin-bottom: 12px;
-}   #tempButton:hover {opacity: 1;}
+}   #tempButton:hover {opacity: 0.7;}
 
 #humButton {
     background-color: blue;
-    opacity: 0.7;
+    opacity: 1;
     border-radius: 8px;
-}   #humButton:hover {opacity: 1;}
+}   #humButton:hover {opacity: 0.7;}
 
 .button {
     width: 100%;
