@@ -35,17 +35,17 @@
 
 #startTimeDiv {
     background-color: blue;
+    height: 55px;
     display: flex;   
     align-items: center;
-    height: 50px;
-}
+}   #startTime {height: 50px;}
 
 #stopTimeDiv {
     background-color: red;
+    height: 55px;
     display: flex;
     align-items: center;
-    height: 50px;
-}
+}   #stopTime {height: 50px;}
 
 #buttons {
     height: fit-content;
