@@ -10,18 +10,18 @@
 
 #centre {
     border: 5px yellow solid;
-    width: 800px;
+    width: 1200px;
     height: auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 #myPlot {
     border: 5px black solid;
-    height: fit-content;
-    width: fit-content;
-    align-self: center;
+    margin-top: 25px;
+    width: 1000px;
+    height: 500px;
 }
 
 #timeDiv {
@@ -29,7 +29,6 @@
     width: fit-content;
     height: max-content;
     display: flex;
-    align-self: flex-end;
     justify-content: center;
 }
 
@@ -51,7 +50,6 @@
     height: fit-content;
     margin-top: 20px;
     border: 1px black solid;
-    justify-self: center;
 }
 
 #graphSwitcherDiv {
