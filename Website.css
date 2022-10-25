@@ -1,26 +1,26 @@
 #body {
     background-color: bisque;
+    border: 2px black solid;
     width: auto;
     height: 800px;
-    border: 2px black solid;
     display: flex;
-    flex-direction: row;
+    flex-wrap: row;
     justify-content: center;
 }
 
 #centre {
     border: 5px yellow solid;
-    height: auto;
     width: 800px;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 #myPlot {
+    border: 5px black solid;
     height: fit-content;
     width: fit-content;
-    border: 5px black solid;
     align-self: center;
 }
 
@@ -52,25 +52,24 @@
 
 #graphSwitcher {
     background-color: aquamarine;
-    height: 800px;
     width: 150px;
+    height: 800px;
     justify-self: flex-start;
 }
 
 .button {
     width: 150px;
     height: 35px;
-
 }
 
 .filler1 {
     background-color: azure;
-    height: 800px;
     width: 200px;
+    height: 800px;
 }
 
-#filler2 {
+.filler2 {
     background-color: aquamarine;
-    height: 800px;
     width: 150px;
+    height: 800px;
 }
