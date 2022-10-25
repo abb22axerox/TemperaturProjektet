@@ -7,7 +7,7 @@ var b = 0
 
 var timeArray = [0,10,25]
 
-console.log(timeList)
+// console.log(timeList)
 
 //Temperature
   // Sensor 1
