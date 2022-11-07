@@ -301,6 +301,19 @@ console.log(timeList)
   //   })
   //   })
 
+//Define trace names
+  let name1
+  let name2
+  let name3
+  let name4
+  let name5
+
+  let name1H
+  let name2H
+  let name3H
+  let name4H
+  let name5H
+
 //The graph function plots the traces. It can make them in different colours.
 //Each trace gets a label name per sensor. 
 function graphFunction() {
@@ -309,7 +322,7 @@ function graphFunction() {
   var data = [
     //Temperature
     {x: timeArray, y: temp1Array, mode:"lines+markers", 
-    line: {color: 'rgb(255,0,0)', width: 3}, name:"Sensor 1 Temp"},
+    line: {color: 'rgb(255,0,0)', width: 3}, name: name1},
 
     {x: timeArray, y: temp2Array, mode:"lines+markers", 
     line: {color: 'rgb(0,255,0)', width: 3}, name:"Sensor 2 Temp"},
