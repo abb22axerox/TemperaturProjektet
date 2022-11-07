@@ -76,7 +76,7 @@ body {
     border: 0ch;
     width: 25%;
     height: auto;
-}
+}   #refreshButton:hover {border: 2px black solid; opacity: 85%;}
 
 #buttons {
     height: fit-content;
