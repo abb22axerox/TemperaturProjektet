@@ -301,18 +301,7 @@ console.log(timeList)
   //   })
   //   })
 
-//Define trace names
-  let name1
-  let name2
-  let name3
-  let name4
-  let name5
-
-  let name1H
-  let name2H
-  let name3H
-  let name4H
-  let name5H
+  var traceName1 = localStorage.getItem("sensor1Name")
 
 //The graph function plots the traces. It can make them in different colours.
 //Each trace gets a label name per sensor. 
@@ -322,7 +311,7 @@ function graphFunction() {
   var data = [
     //Temperature
     {x: timeArray, y: temp1Array, mode:"lines+markers", 
-    line: {color: 'rgb(255,0,0)', width: 3}, name: name1},
+    line: {color: 'rgb(255,0,0)', width: 3}, name: traceName1},
 
     {x: timeArray, y: temp2Array, mode:"lines+markers", 
     line: {color: 'rgb(0,255,0)', width: 3}, name:"Sensor 2 Temp"},
@@ -364,6 +353,7 @@ function graphFunction() {
 
   a = Number(document.getElementById("startTime").value)
   b = Number(document.getElementById("stopTime").value)
+  console.log(a)
 
   // Define Layout
   //Defines the name of the axis, temp, hum, time, titles
