@@ -12,7 +12,7 @@
 
 
 <body>
-  <h1 id="titel"><strong>I HETASTE LAGET</strong></h1>
+  <h1 id="header"><strong>I HETASTE LAGET</strong></h1>
   <div id="body">
 
     <div id="graphSwitcherDiv">
@@ -26,19 +26,20 @@
 
       <div id="myPlot"></div>
     
-      <form id="timeDiv">
-        <div id="startTimeDiv">
-          <label for="fname"><strong>Start Time:</strong></label>
-            <br>
-          <input type="text" id="startTime" value="">
+      <form id="timeDivDiv">
+        <div id="timeDiv">
+          <div id="startTimeDiv">
+            <label for="fname"><strong>Start Time:</strong></label>
+              <br>
+            <input type="text" id="startTime" value="">
+          </div>
+          <div id="stopTimeDiv">
+            <label for="fname"><strong>Stop Time:</strong></label>
+              <br>
+            <input type="text" id="stopTime" value="">
+          </div>
         </div>
-          <br>
-        <div id="stopTimeDiv">
-          <label for="fname"><strong>Stop Time:</strong></label>
-            <br>
-          <input type="text" id="stopTime" value="">
-        </div>
-          <input type="reset" value="Reset/Refresh" onclick="refreshFunction()">
+        <input type="reset" id="refreshButton" value="Refresh" onclick="refreshFunction()">
       </form>
 
       <div id="buttons">
