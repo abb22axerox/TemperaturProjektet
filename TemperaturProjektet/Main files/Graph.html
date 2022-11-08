@@ -25,6 +25,7 @@
 </head>
 
 <body> 
+  <img class="background" src="Vasteras_Finnslatten_Markperspektiv_190703_utan_logga_ALV_EJ-FRI-ANV-2048x1024-1.jpg" alt="backG">
   <div id="navBar">
     <button id="iHetasteLaget"><strong>I Hetaste Laget</strong></button>
     <div id="navButtonsDiv">
@@ -58,7 +59,7 @@
             <input type="text" id="stopTime" value="">
           </div>
         </div>
-        <input type="reset" id="refreshButton" value="Refresh" onclick="refreshFunction()">
+        <input type="reset" id="refreshButton" value="" onclick="refreshFunction()">
       </form>
 
       <div id="sensorButtonsDiv">
@@ -87,16 +88,12 @@
         <span class="sensorSpan">S5</span>
         </label>
       </div>
-
     </div>
-
     <div class="filler"></div> 
-
   </div>
-  <div id="write">
-    <p>The serial number is: </p>
-</div>
+  <footer>
 
+  </footer>
   <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
   <script src="Graph.js"></script>
