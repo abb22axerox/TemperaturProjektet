@@ -301,6 +301,15 @@ console.log(timeList)
   //   })
   //   })
 
+  //The different sensor names from the settings tab
+  //Recieving data from local storage
+  var traceName1 = localStorage.getItem("sensor1Name")
+  var traceName2 = localStorage.getItem("sensor2Name")
+  var traceName3 = localStorage.getItem("sensor3Name")
+  var traceName4 = localStorage.getItem("sensor4Name")
+  var traceName5 = localStorage.getItem("sensor5Name")
+
+
 //The graph function plots the traces. It can make them in different colours.
 //Each trace gets a label name per sensor. 
 function graphFunction() {
