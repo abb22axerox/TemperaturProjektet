@@ -4,8 +4,8 @@
   <title>I Hetaste Laget - About us</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="About.css">
+  <link rel="stylesheet" href="Navigation.css">
+  <link rel="stylesheet" href="Settings.css">
   <script>
   function theSettingsPage(){
     window.location.href = "Settings.html"
@@ -26,7 +26,15 @@
 </head>
 <body>
 
-  
+  <div id="navBar">
+    <button id="iHetasteLaget"><strong>I Hetaste Laget</strong></button>
+    <div id="navButtonsDiv">
+      <button class="navButton" id="navTheGraph" onclick="theGraphPage()">The Graph</button>
+      <button class="navButton" id="navContactUs" onclick="contactUsPage()">Contact Us</button>
+      <button class="navButton" id="navAboutUs" onclick="aboutUsPage()">About Us</button>
+      <button class="navButton" id="navTheSettings" onclick="theSettingsPage()">Settings</button>
+    </div>
+  </div>
 
   <form>
     <label>Sensor1:<br />

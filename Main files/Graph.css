@@ -98,6 +98,7 @@ body {
 }
 #tempButton {
     margin-bottom: 12px;
+    margin-left: 5%;
     background-color: red;
     border-radius: 8px;
 }   #tempButton:hover {background-color: pink; border: 2px black solid;}
