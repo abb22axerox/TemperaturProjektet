@@ -92,7 +92,7 @@ body {
 #S5Label{background-color: rgb(255,255,0)}
 
 #graphSwitcherDiv {
-    width: 7.5%;
+    width: 12.5%;
     height: 800px;
     justify-self: flex-start;
 }
@@ -112,12 +112,7 @@ body {
     height: 35px;
 }
 
-.filler1 {
-    width: 5%;
-    height: 800px;
-}
-
-.filler2 {
-    width: 7.5%;
+.filler {
+    width: 12.5%;
     height: 800px;
 }
