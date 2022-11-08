@@ -1,0 +1,118 @@
+body {
+    background-color: lightblue;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#graphBody {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-wrap: row;
+    justify-content: center;
+}
+
+#centre {
+    width: 75%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#myPlot {
+    margin-top: 25px;
+    width: 85%;
+    height: 50%;
+}
+
+#timeDivDiv {
+    margin-top: 15px;
+    width: 42.5%;
+    height: 10%;
+    display: flex;
+}
+
+#timeDiv {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#startTimeDiv {
+    background-color: lightgreen;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}   #startTime {height: auto; width: 35%; margin-right: 2.5%;}
+
+#stopTimeDiv {
+    background-color: khaki;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}   #stopTime {height: auto; width: 35%; margin-right: 2.5%;}
+
+#refreshButton {
+    background-color: lawngreen;
+    border: 0ch;
+    width: 25%;
+    height: auto;
+}   #refreshButton:hover {border: 2px black solid; opacity: 85%;}
+
+#sensorButtonsDiv {
+    margin-top: 20px;
+    border: 1px black solid;
+    width: 30%;
+    height: 3.5%;
+    display: flex;
+    justify-content: center;
+}
+
+.switch {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   .switch input {opacity: 0; height: 0px; width: 0;}
+    .switch:hover {opacity: 85%; border: 1px black solid;}
+
+#S1Label{background-color: rgb(255,0,0)}
+#S2Label{background-color: rgb(0,255,0)}
+#S3Label{background-color: rgb(0,0,255)}
+#S4Label{background-color: rgb(0,255,255)}
+#S5Label{background-color: rgb(255,255,0)}
+
+#graphSwitcherDiv {
+    width: 12.5%;
+    height: 800px;
+    justify-self: flex-start;
+}
+#tempButton {
+    margin-bottom: 12px;
+    background-color: red;
+    border-radius: 8px;
+}   #tempButton:hover {background-color: pink; border: 2px black solid;}
+
+#humButton {
+    background-color: blue;
+    border-radius: 8px;
+}   #humButton:hover {background-color: lightblue; border: 2px black solid;}
+
+.button {
+    width: 100%;
+    height: 35px;
+}
+
+.filler {
+    width: 12.5%;
+    height: 800px;
+}
