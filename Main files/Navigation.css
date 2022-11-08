@@ -1,0 +1,61 @@
+#navBar {
+    
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#iHetasteLaget {
+    border: 0;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin-left: 2%;
+    width: 15%;
+    height: 60%;
+    font-size: large;
+}   #iHetasteLaget:hover{animation-name: logo; animation-duration: 2s; animation-iteration-count: infinite;}
+
+@keyframes logo {
+    0% {background-color: blue;}
+    50% {background-color: white;}
+    100% {background-color: blue;}
+}
+
+#navButtonsDiv {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navButton {
+    background-color: white;
+    height: 60%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   .navButton:hover {animation-name: navButton;  animation-duration: 5s; animation-iteration-count: infinite; font-weight: bold;}
+
+@keyframes navButton {
+    0% {background-color: white;}
+    25% {background-color: thistle;}
+    50% {background-color: white;}
+    75% {background-color: thistle;}
+    100% {background-color: white;}
+}
+
+#navTheGraph {
+    margin-right: 8%;
+}
+
+#navContactUs {
+    margin-right: 8%;
+}
+
+#navAboutUs {
+    margin-right: 2.5%;
+}

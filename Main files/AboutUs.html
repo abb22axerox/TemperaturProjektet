@@ -4,30 +4,41 @@
 <title>TP - About us</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="Navigation.css">
 <style>
+  body {
+    margin: 0;
+  }
+
   .title {
     margin-left: 2%;
   }
 </style>
+<script>
+  function aboutUsPage(){
+  window.location.href = "AboutUs.html";
+  } 
+
+  function contactUsPage(){
+  window.location.href = "ContactUs.html"
+  }
+
+  function theGraphPage(){
+  window.location.href = "Index.html"
+  }
+</script>
 </head>
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button"><b>BG5</b> Projektet</a>
-    <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="Index.html" class="w3-bar-item w3-button">Graph</a>
-      <a href="AboutUs.html" class="w3-bar-item w3-button">About</a>
-      <a href="ContactUs.html" class="w3-bar-item w3-button">Contact</a>
+  <div id="navBar">
+    <button id="iHetasteLaget"><strong>I Hetaste Laget</strong></button>
+    <div id="navButtonsDiv">
+      <button class="navButton" id="navTheGraph" onclick="theGraphPage()">The Graph</button>
+      <button class="navButton" id="navContactUs" onclick="contactUsPage()">Contact Us</button> <!--soon to be removed?-->
+      <button class="navButton" id="navAboutUs" onclick="aboutUsPage()">About Us</button>
     </div>
   </div>
-</div>
-<br>
-<br>
-<br>
+
 <h2 class="title">
   <strong>
   TemperaturProjektet
