@@ -15,13 +15,13 @@ firebase.initializeApp(firebaseConfig);
 
 const db = firebase.database();
 
-var room2Ref = db.ref("rum2");
+var room3Ref = db.ref("rum2");
 
 let timeList = []
 
 let tempList = []
 
-room2Ref.once("value").then((snapshot) => {
+room3Ref.once("value").then((snapshot) => {
   let r2r = snapshot.val()
   // console.log(r2r)
   let tempTime = r2r.split(',')
