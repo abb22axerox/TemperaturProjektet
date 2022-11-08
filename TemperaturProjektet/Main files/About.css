@@ -2,6 +2,8 @@ body{
     margin: 0;
 }
 
+
+
 #box {
     display: flex;
     flex-direction: column;
@@ -15,4 +17,22 @@ body{
 
 .aboutProject {
     width: 70%;
+}
+
+#contactInfo {
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact {
+    width: 18%;
+}
+
+#roxContact {
+    margin-left: 5%;
 }

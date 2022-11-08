@@ -14,10 +14,6 @@
     window.location.href = "About.html";
   } 
 
-  function contactUsPage(){
-    window.location.href = "Contact.html"
-  }
-
   function theGraphPage(){
     window.location.href = "Graph.html"
   }
@@ -29,22 +25,78 @@
     <button id="iHetasteLaget"><strong>I Hetaste Laget</strong></button>
     <div id="navButtonsDiv">
       <button class="navButton" id="navTheGraph" onclick="theGraphPage()">The Graph</button>
-      <button class="navButton" id="navContactUs" onclick="contactUsPage()">Contact Us</button> <!--soon to be removed?-->
       <button class="navButton" id="navAboutUs" onclick="aboutUsPage()">About Us</button>
       <button class="navButton" id="navTheSettings" onclick="theSettingsPage()">Settings</button>
     </div>
   </div>
 
-<div id="box">
-  <h2 class="title">
-    <strong>
-    TemperaturProjektet - I hetaste laget
-    </strong>
-  </h2>
-  <br>
-  <div class="aboutProject">
-    <p>Projektet <strong>"I hetaste laget"</strong> går ut på att mäta temperatur och luftfuktighet i olika rum och lagra datan i en databas. Databasen vi har använt oss av är Realtime Database i Firebase. Datan ska från databasen skickas till hemsidan. Vi har i Basgrupp 5 valt att presentera datan i en graf. Man kan välja om man vill se datan för fuktighet eller temperatur. Temperaturen och luftfuktigheten har mätts under ett dygn med intervall på en minut. Med hjälp av de praktiska inmatnings-rutorna kan man enkelt matan in de tidpunkter man vill se temperatur/luftfuktighet mellan.</p>
+  <div id="box">
+    <h2 class="title">
+      <strong>
+      TemperaturProjektet - I hetaste laget
+      </strong>
+    </h2>
+    <br>
+    <div class="aboutProject">
+      <p>Projektet <strong>"I hetaste laget"</strong> går ut på att mäta temperatur och luftfuktighet i olika rum och lagra datan i en databas. Databasen vi har använt oss av är Realtime Database i Firebase. Datan ska från databasen skickas till hemsidan. Vi har i Basgrupp 5 valt att presentera datan i en graf. Man kan välja om man vill se datan för fuktighet eller temperatur. Temperaturen och luftfuktigheten har mätts under ett dygn med intervall på en minut. Med hjälp av de praktiska inmatnings-rutorna kan man enkelt matan in de tidpunkter man vill se temperatur/luftfuktighet mellan.</p>
+    </div>
   </div>
-</div>
+
+  <h2 id="contactInfo">Contact info:</h2>
+    <div class="contacts">
+        <!-- Axel Roxenborg -->
+        <div class="contact" id="roxContact">
+            <p>Axel Roxenborg</p>
+            <p class="contributions"><b>The Graph</b> Javascript &amp; HTML</p>
+            <button class="copyEmail" onclick="copyEmail1()">Copy Email</button>
+        </div>
+        <!-- Oliver Sarebro -->
+        <div class="contact" id="oliContact">
+            <p>Oliver Sarebro</p>
+            <p class="contributions"><b>Website</b> CSS &amp; HTML</p>
+            <button class="copyEmail" onclick="copyEmail2()">Copy Email</button>
+        </div>
+        <!-- Andreas Sananes -->
+        <div class="contact" id="andContact">
+            <p>Andreas Sananes</p>
+            <p class="contributions"><b>Firebase</b> Javascript</p>
+            <button class="copyEmail" onclick="copyEmail3()">Copy Email</button>
+        </div>
+        <!-- Axel Rosenberg -->
+        <div class="contact" id="rosContact">
+            <p>Axel Rosenberg</p>
+            <p class="contributions"><b>Arduino</b> C++</p>
+            <button class="copyEmail" onclick="copyEmail4()">Copy Email</button>
+        </div>
+        <!-- Kevin Nedell -->
+        <div class="contact" id="kevContact">
+            <p>Kevin Nedell</p>
+            <p class="contributions"><b>Member</b></p>
+            <button class="copyEmail" onclick="copyEmail5()">Copy Email</button>
+        </div>
+    </div>
+
+    <script>
+        function copyEmail1() {
+            navigator.clipboard.writeText("axel.roxenborg@abbgymnasiet.se");
+            alert("Copied Axel's mail to the clipboard");
+        }
+        function copyEmail2() {
+            navigator.clipboard.writeText("oliver.sarebro@abbgymnasiet.se");
+            alert("Copied Oliver's mail to the clipboard");
+        }
+        function copyEmail3() {
+            navigator.clipboard.writeText("andreas.sananes@abbgymnasiet.se");
+            alert("Copied Andreas mail to the clipboard");
+        }
+        function copyEmail4() {
+            navigator.clipboard.writeText("axel.rosenberg@abbgymnasiet.se");
+            alert("Copied Axel's mail to the clipboard");
+        }
+        function copyEmail5() {
+            navigator.clipboard.writeText("kevin.nedell@abbgymnasiet.se");
+            alert("Copied Kevin's mail to the clipboard");
+        }
+    </script>
 </body>
 </html>
