@@ -318,7 +318,7 @@ function graphFunction() {
   var data = [
     //Temperature
     {x: timeArray, y: temp1Array, mode:"lines+markers", 
-    line: {color: 'rgb(255,0,0)', width: 3}, name:"Sensor 1 Temp"},
+    line: {color: 'rgb(255,0,0)', width: 3}, name: traceName1},
 
     {x: timeArray, y: temp2Array, mode:"lines+markers", 
     line: {color: 'rgb(0,255,0)', width: 3}, name: traceName2},
@@ -340,19 +340,19 @@ function graphFunction() {
     data = [
     //Humidity
     {x: timeArray, y: hum1Array, mode:"lines+markers", 
-    line: {color: 'rgb(255,0,0)', width: 3}, name:"Sensor 1 Hum"},
+    line: {color: 'rgb(255,0,0)', width: 3}, name: traceName1},
 
     {x: timeArray, y: hum2Array, mode:"lines+markers", 
-    line: {color: 'rgb(0,255,0)', width: 3}, name:"Sensor 2 Hum"},
+    line: {color: 'rgb(0,255,0)', width: 3}, name: traceName2},
 
     {x: timeArray, y: hum3Array, mode:"lines+markers", 
-    line: {color: 'rgb(0,0,255)', width: 3}, name:"Sensor 3 Hum"},
+    line: {color: 'rgb(0,0,255)', width: 3}, name: traceName3},
 
     {x: timeArray, y: hum4Array, mode:"lines+markers", 
-    line: {color: 'rgb(0,255,255)', width: 3}, name:"Sensor 4 Hum"},
+    line: {color: 'rgb(0,255,255)', width: 3}, name: traceName4},
 
     {x: timeArray, y: hum5Array, mode:"lines+markers", 
-    line: {color: 'rgb(255,255,0)', width: 3}, name:"Sensor 5 Hum"},
+    line: {color: 'rgb(255,255,0)', width: 3}, name: traceName5},
 
     // {x: timeArray, y: humSArray, mode:"lines+markers", 
     // line: {color: 'rgb(0,0,0)', width: 3}, name:"SMHI Hum"}
