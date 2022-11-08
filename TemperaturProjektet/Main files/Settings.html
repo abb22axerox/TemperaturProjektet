@@ -5,10 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="About.css">
+<link rel="stylesheet" href="Settings.css">
 </head>
 <body>
-
   <!-- Navbar (sit on top) -->
   <div class="w3-top">
     <div class="w3-bar w3-white w3-wide w3-padding w3-card">
@@ -25,12 +24,32 @@
   <br>
   <br>
   <br>
-  <br>
-  <form>
-    <label>Sensor1:<br />
-    <input type="text" id="sensor1Value"/></label><br> 
-    <input type="submit" value="Change" onclick="getData()">
+  <h1 class="settings">Settings</h1>
+  <form class="settings">
+    <label>Sensor1 Name:<br />
+    <input type="text" id="sensor1Value"/></label>
   </form>
-
+  <br>
+  <form class="settings">
+    <label>Sensor2 Name:<br />
+    <input type="text" id="sensor2Value"/></label>
+  </form>
+  <br>
+  <form class="settings">
+    <label>Sensor3 Name:<br />
+    <input type="text" id="sensor3Value"/></label>
+  </form>
+  <br>
+  <form class="settings">
+    <label>Sensor4 Name:<br />
+    <input type="text" id="sensor4Value"/></label>
+  </form>
+  <br>
+  <form class="settings">
+    <label>Sensor5 Name:<br />
+    <input type="text" id="sensor5Value"/></label>
+  </form>
+  <br>
+  <input class="settings" type="submit" value="Save" onclick="getData()">
   <script src="Settings.js"></script>
 </body>
