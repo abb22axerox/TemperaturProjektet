@@ -2,36 +2,49 @@
 <html>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <link rel="stylesheet" href="Graph.css">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="Website.css">
+<link rel="stylesheet" href="Navigation.css">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hetaste Laget - Graph</title>
+  <title>I Hetaste Laget - Graph</title>
+  <script>
+    function theSettingsPage(){
+      window.location.href = "Settings.html"
+    }
+
+    function aboutUsPage(){
+      window.location.href = "About.html";
+    } 
+
+    function contactUsPage(){
+      window.location.href = "Contact.html"
+    }
+
+    function theGraphPage(){
+      window.location.href = "Graph.html"
+    }
+  </script>
 </head>
-<body>
-  <!-- Navbar (sit on top) -->
-  <div class="w3-top">
-    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-      <a href="#home" class="w3-bar-item w3-button"><h6 id="header"><strong>I HETASTE LAGET</strong></h6></a>
-      <!-- Float links to the right. Hide them on small screens -->
-      <div class="w3-right w3-hide-small">
-        <a href="Graph.html" class="w3-bar-item w3-button">Graph</a>
-        <a href="About.html" class="w3-bar-item w3-button">About</a>
-        <a href="Contact.html" class="w3-bar-item w3-button">Contact</a>
-        <a href="Settings.html" class="w3-bar-item w3-button">Settings</a>
-      </div>
+
+<body> 
+  <div id="navBar">
+    <button id="iHetasteLaget"><strong>I Hetaste Laget</strong></button>
+    <div id="navButtonsDiv">
+      <button class="navButton" id="navTheGraph" onclick="theGraphPage()">The Graph</button>
+      <button class="navButton" id="navContactUs" onclick="contactUsPage()">Contact Us</button>
+      <button class="navButton" id="navAboutUs" onclick="aboutUsPage()">About Us</button>
+      <button class="navButton" id="navTheSettings" onclick="theSettingsPage()">Settings</button>
     </div>
   </div>
   
-  <div id="body">
+  <div id="graphBody">
 
     <div id="graphSwitcherDiv">
       <button class="button" id="tempButton" onclick="tempFunction()"><strong>Temperature</strong></button>
       <button class="button" id="humButton" onclick="humFunction()"><strong>Humidity</strong></button>
     </div>
-
-    <div class="filler1"></div>
 
     <div id="centre">
 
@@ -83,8 +96,7 @@
 
     </div>
 
-    <div class="filler1"></div> 
-    <div class="filler2"></div>
+    <div class="filler"></div> 
 
   </div>
   <div id="write">

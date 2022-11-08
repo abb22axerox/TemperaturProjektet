@@ -1,55 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Hetaste Laget - About us</title>
+<title>I Hetaste Laget - About us</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="Settings.css">
+<link rel="stylesheet" href="About.css">
+<script>
+  function aboutUsPage(){
+  window.location.href = "About.html";
+  } 
+
+  function contactUsPage(){
+  window.location.href = "Contact.html"
+  }
+
+  function theGraphPage(){
+  window.location.href = "Graph.html"
+  }
+</script>
 </head>
 <body>
-  <!-- Navbar (sit on top) -->
-  <div class="w3-top">
-    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-      <a href="#home" class="w3-bar-item w3-button"><h6 id="header"><strong>I HETASTE LAGET</strong></h6></a>
-      <!-- Float links to the right. Hide them on small screens -->
-      <div class="w3-right w3-hide-small">
-        <a href="Graph.html" class="w3-bar-item w3-button">Graph</a>
-        <a href="About.html" class="w3-bar-item w3-button">About</a>
-        <a href="Contact.html" class="w3-bar-item w3-button">Contact</a>
-        <a href="Settings.html" class="w3-bar-item w3-button">Settings</a>
-      </div>
-    </div>
-  </div>
-  <br>
-  <br>
-  <br>
-  <h1 class="settings">Settings</h1>
-  <form class="settings">
-    <label>Sensor1 Name:<br />
-    <input type="text" id="sensor1Value"/></label>
+
+
+
+  <form>
+    <label>Sensor1:<br />
+    <input type="text" id="sensor1Value"/></label><br> 
+    <input type="submit" value="Change" onclick="getData()">
   </form>
-  <br>
-  <form class="settings">
-    <label>Sensor2 Name:<br />
-    <input type="text" id="sensor2Value"/></label>
-  </form>
-  <br>
-  <form class="settings">
-    <label>Sensor3 Name:<br />
-    <input type="text" id="sensor3Value"/></label>
-  </form>
-  <br>
-  <form class="settings">
-    <label>Sensor4 Name:<br />
-    <input type="text" id="sensor4Value"/></label>
-  </form>
-  <br>
-  <form class="settings">
-    <label>Sensor5 Name:<br />
-    <input type="text" id="sensor5Value"/></label>
-  </form>
-  <br>
-  <input class="settings" type="submit" value="Save" onclick="getData()">
+
   <script src="Settings.js"></script>
 </body>
