@@ -97,12 +97,15 @@ body {
     justify-self: flex-start;
 }
 #tempButton {
+    margin-top: 15%;
     margin-bottom: 12px;
+    margin-left: 15%;
     background-color: red;
     border-radius: 8px;
 }   #tempButton:hover {background-color: pink; border: 2px black solid;}
 
 #humButton {
+    margin-left: 15%;
     background-color: blue;
     border-radius: 8px;
 }   #humButton:hover {background-color: lightblue; border: 2px black solid;}

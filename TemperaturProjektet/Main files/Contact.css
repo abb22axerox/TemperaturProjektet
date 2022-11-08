@@ -2,6 +2,11 @@ body {
     margin: 0;
 }
 
+.contacts {
+    display: flex;
+    flex-direction: row;
+}
+
 #contacts {
     width: 20%;
     display: flex;
@@ -11,4 +16,5 @@ body {
 
 .contactInfo {
     margin-left: 2%;
+
 }

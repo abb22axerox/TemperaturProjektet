@@ -301,7 +301,14 @@ console.log(timeList)
   //   })
   //   })
 
+  //The different sensor names from the settings tab
+  //Recieving data from local storage
   var traceName1 = localStorage.getItem("sensor1Name")
+  var traceName2 = localStorage.getItem("sensor2Name")
+  var traceName3 = localStorage.getItem("sensor3Name")
+  var traceName4 = localStorage.getItem("sensor4Name")
+  var traceName5 = localStorage.getItem("sensor5Name")
+
 
 //The graph function plots the traces. It can make them in different colours.
 //Each trace gets a label name per sensor. 
@@ -314,16 +321,16 @@ function graphFunction() {
     line: {color: 'rgb(255,0,0)', width: 3}, name: traceName1},
 
     {x: timeArray, y: temp2Array, mode:"lines+markers", 
-    line: {color: 'rgb(0,255,0)', width: 3}, name:"Sensor 2 Temp"},
+    line: {color: 'rgb(0,255,0)', width: 3}, name: traceName2},
 
     {x: timeArray, y: temp3Array, mode:"lines+markers", 
-    line: {color: 'rgb(0,0,255)', width: 3}, name:"Sensor 3 Temp"},
+    line: {color: 'rgb(0,0,255)', width: 3}, name: traceName3},
 
     {x: timeArray, y: temp4Array, mode:"lines+markers", 
-    line: {color: 'rgb(0,255,255)', width: 3}, name:"Sensor 4 Temp"},
+    line: {color: 'rgb(0,255,255)', width: 3}, name: traceName4},
 
     {x: timeArray, y: temp5Array, mode:"lines+markers", 
-    line: {color: 'rgb(255,255,0)', width: 3}, name:"Sensor 5 Temp"},
+    line: {color: 'rgb(255,255,0)', width: 3}, name: traceName5},
 
     // {x: timeArray, y: tempSArray, mode:"lines+markers", 
     // line: {color: 'rgb(0,0,0)', width: 3}, name:"SMHI Temp"}
@@ -333,19 +340,19 @@ function graphFunction() {
     data = [
     //Humidity
     {x: timeArray, y: hum1Array, mode:"lines+markers", 
-    line: {color: 'rgb(255,0,0)', width: 3}, name:"Sensor 1 Hum"},
+    line: {color: 'rgb(255,0,0)', width: 3}, name: traceName1},
 
     {x: timeArray, y: hum2Array, mode:"lines+markers", 
-    line: {color: 'rgb(0,255,0)', width: 3}, name:"Sensor 2 Hum"},
+    line: {color: 'rgb(0,255,0)', width: 3}, name: traceName2},
 
     {x: timeArray, y: hum3Array, mode:"lines+markers", 
-    line: {color: 'rgb(0,0,255)', width: 3}, name:"Sensor 3 Hum"},
+    line: {color: 'rgb(0,0,255)', width: 3}, name: traceName3},
 
     {x: timeArray, y: hum4Array, mode:"lines+markers", 
-    line: {color: 'rgb(0,255,255)', width: 3}, name:"Sensor 4 Hum"},
+    line: {color: 'rgb(0,255,255)', width: 3}, name: traceName4},
 
     {x: timeArray, y: hum5Array, mode:"lines+markers", 
-    line: {color: 'rgb(255,255,0)', width: 3}, name:"Sensor 5 Hum"},
+    line: {color: 'rgb(255,255,0)', width: 3}, name: traceName5},
 
     // {x: timeArray, y: humSArray, mode:"lines+markers", 
     // line: {color: 'rgb(0,0,0)', width: 3}, name:"SMHI Hum"}
@@ -353,7 +360,6 @@ function graphFunction() {
 
   a = Number(document.getElementById("startTime").value)
   b = Number(document.getElementById("stopTime").value)
-  console.log(a)
 
   // Define Layout
   //Defines the name of the axis, temp, hum, time, titles
