@@ -106,5 +106,48 @@
   <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
   <script src="Graph.js"></script>
   <!-- <script src="Settings.js"></script> -->
+  <style>
+    .theme-button{
+      background-color: lightskyblue;
+      border: none;
+      color: black;
+      padding: 10px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 4px 2px;
+      cursor: pointer;
+      position: absolute;
+    }
+  </style>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {
+      padding: 2px;
+      background-color: lightblue;
+      color: black;
+      font-size: 15px;
+    }
+    
+    .dark-mode {
+      background-color: rgb(10, 10, 112);
+      color: black;
+    }
+    </style>
+    </head>
+    <style>
+    </style>
+    <body>
+    <button class="theme-button" onclick="myFunction()">Change theme</button>
+    
+    <script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>
 </body>
 </html>
