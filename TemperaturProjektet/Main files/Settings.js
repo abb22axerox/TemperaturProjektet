@@ -47,6 +47,5 @@ function getData(){
     if(sensor5Name == null){
         localStorage.setItem("sensor5Name", "Sensor5"); 
     }
-
     alert("Saved successfully!")
 }
