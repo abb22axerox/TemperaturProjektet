@@ -68,8 +68,6 @@ console.log(timeList)
   var temp4Array = [0]
   // Sensor 5
   var temp5Array = [0]
-  //SMHI??
-  // var tempSArray = [0]
 
 //Humidity
   //Sensor 1
@@ -82,8 +80,6 @@ console.log(timeList)
   var hum4Array = [0]
   // Sensor 5
   var hum5Array = [0]
-  //SMHI??
-  // var humSArray = [0]
 
   var chosen = 0
 
@@ -126,7 +122,6 @@ console.log(timeList)
     document.getElementById(id="S3").checked = false;
     document.getElementById(id="S4").checked = false;
     document.getElementById(id="S5").checked = false;
-    // document.getElementById(id="SMHI").checked = false;
   }
 
   //Display a trace in the graph if temperature (chosen = 1) or humidity (chosen = 2) 
@@ -272,34 +267,6 @@ console.log(timeList)
       }
     })
     })
-
-  //SMHI??
-  // document.addEventListener('DOMContentLoaded', function () {
-  //   var sensorS = document.querySelector('input[id="SMHI"]')
-
-  //   sensorS.addEventListener('change', function () {
-  //     if (sensorS.checked) {
-  //       if(chosen == 1){
-  //         tempSArray = [8,19,44]
-  //         graphFunction()
-  //       }
-  //       if(chosen == 2){
-  //         humSArray = [4,30,20]
-  //         graphFunction()
-  //       }
-  //       if(chosen == 0){
-  //       alert("Please press the Temperature/Humidity button first")
-  //       document.getElementById(id="SS").checked = false;
-  //       }
-  //     } else{
-  //       tempSArray = [0]
-  //       graphFunction()
-
-  //       humSArray = [0]
-  //       graphFunction()
-  //     }
-  //   })
-  //   })
 
   //The different sensor names from the settings tab
   //Recieving data from local storage
