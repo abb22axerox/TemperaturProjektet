@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>I Hetaste Laget - About us</title>
+<title>I Hetaste Laget - Settings</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="Navigation.css">
 <link rel="stylesheet" href="Settings.css">
 <script>
+  function theSettingsPage(){
+    window.location.href = "Settings.html"
+  }
   function aboutUsPage(){
-  window.location.href = "About.html";
+    window.location.href = "About.html";
   } 
 
   function contactUsPage(){
-  window.location.href = "Contact.html"
+    window.location.href = "Contact.html"
   }
 
   function theGraphPage(){
-  window.location.href = "Graph.html"
+    window.location.href = "Graph.html"
   }
 </script>
 </head>
+
 <body>
-  <!-- Navbar (sit on top) -->
-  <div class="w3-top">
-    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-      <a href="#home" class="w3-bar-item w3-button"><h6 id="header"><strong>I HETASTE LAGET</strong></h6></a>
-      <!-- Float links to the right. Hide them on small screens -->
-      <div class="w3-right w3-hide-small">
-        <a href="Graph.html" class="w3-bar-item w3-button">Graph</a>
-        <a href="About.html" class="w3-bar-item w3-button">About</a>
-        <a href="Contact.html" class="w3-bar-item w3-button">Contact</a>
-        <a href="Settings.html" class="w3-bar-item w3-button">Settings</a>
-      </div>
+  <div id="navBar">
+    <button id="iHetasteLaget"><strong>I Hetaste Laget</strong></button>
+    <div id="navButtonsDiv">
+      <button class="navButton" id="navTheGraph" onclick="theGraphPage()">The Graph</button>
+      <button class="navButton" id="navContactUs" onclick="contactUsPage()">Contact Us</button>
+      <button class="navButton" id="navAboutUs" onclick="aboutUsPage()">About Us</button>
+      <button class="navButton" id="navTheSettings" onclick="theSettingsPage()">Settings</button>
     </div>
   </div>
-  <br>
-  <br>
-  <br>
+  
   <h1 class="settings">Settings</h1>
+  <h3 class="settings">Change Sensor Names</h3>
   <form class="settings">
     <label>Sensor1 Name:<br />
     <input type="text" id="sensor1Value"/></label>
