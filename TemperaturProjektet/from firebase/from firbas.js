@@ -1,5 +1,7 @@
 // Your web app's Firebase configuration
 
+//this is NOT done yet
+
 const firebaseConfig = {
     apiKey: "AIzaSyDzJMZg8uoitcrbyop9PPu5aQpuw2ja38Q",
     authDomain: "test-7552f.firebaseapp.com",
@@ -15,33 +17,30 @@ firebase.initializeApp(firebaseConfig);
 
 const db = firebase.database();
 
-var room2Ref = db.ref("rum2");
+//room1----------------------------------------------------------------
 
-let timeList = []
-let tempList = []
+var room1Ref = db.ref("rum1");
 
-room2Ref.once("value").then((snapshot) => {
-    let r2r = snapshot.val()
-    // console.log(r2r)
-    let tempTime = r2r.split(',')
-    // console.log(tempTime)
+let timeList1 = []
+let tempList1 = []
+
+room1Ref.once("value").then((snapshot) => {
+    let r1r = snapshot.val()
+    let tempTime = r1r.split(',')
     let IDKWhatToNameThis = []
     for(i = 0; i < tempTime.length; i++){
         IDKWhatToNameThis.push(tempTime[i].split(' '))
-        // console.log(IDKWhatToNameThis)
         }
-    // console.log(IDKWhatToNameThis[0][1] + ' turtles eat toast')
 
 
     for(i=0; i < IDKWhatToNameThis.length; i++){
-        timeList.push(IDKWhatToNameThis[i][0])
-        // console.log(timeList)
+        timeList1.push(IDKWhatToNameThis[i][0])
     }
 
     for(i=0; i < IDKWhatToNameThis.length; i++){
-        tempList.push(IDKWhatToNameThis[i][1])
-        // console.log(tempList)
+        tempList1.push(IDKWhatToNameThis[i][1])
     }
-    console.log(timeList)
-    console.log(tempList)
+    console.log(timeList1)
+    console.log(tempList1)
 })
+
