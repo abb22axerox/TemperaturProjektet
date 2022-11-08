@@ -1,6 +1,12 @@
 body {
+    background-color: lightblue;
     margin: 0;
 }
 .settings {
     margin-left: 2%;
 }
+
+.sensorInput {
+    border: 0;
+    background-color: aquamarine;
+}   .sensorInput:hover {opacity: 85%; border: 2px black solid;}

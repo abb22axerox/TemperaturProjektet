@@ -1,8 +1,7 @@
 body{
+    background-color: lightblue;
     margin: 0;
 }
-
-
 
 #box {
     display: flex;
@@ -36,3 +35,8 @@ body{
 #roxContact {
     margin-left: 5%;
 }
+
+.copyEmail {
+    background-color: aquamarine;
+    border: 1px black solid;
+}   .copyEmail:hover {opacity: 85%; border: 2px black solid;}
