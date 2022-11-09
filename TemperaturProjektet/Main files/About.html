@@ -6,18 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="Navigation.css">
 <link rel="stylesheet" href="About.css">
-<script>
-  function theSettingsPage(){
-    window.location.href = "Settings.html"
-  }
-  function aboutUsPage(){
-    window.location.href = "About.html";    // :)
-  } 
-
-  function theGraphPage(){
-    window.location.href = "Graph.html"
-  }
-</script>
 </head>
 <body>
   <div id="navBar">
@@ -72,28 +60,6 @@
             <button class="copyEmail" onclick="copyEmail5()">Get Email</button>
         </div>
       </div>
-
-    <script>
-        function copyEmail1() {
-            navigator.clipboard.writeText("axel.roxenborg@abbgymnasiet.se");
-            alert("Copied Axel's mail to the clipboard");
-        }
-        function copyEmail2() {
-            navigator.clipboard.writeText("oliver.sarebro@abbgymnasiet.se");
-            alert("Copied Oliver's mail to the clipboard");
-        }
-        function copyEmail3() {
-            navigator.clipboard.writeText("andreas.sananes@abbgymnasiet.se");
-            alert("Copied Andreas mail to the clipboard");
-        }
-        function copyEmail4() {
-            navigator.clipboard.writeText("axel.rosenberg@abbgymnasiet.se");
-            alert("Copied Axel's mail to the clipboard");
-        }
-        function copyEmail5() {
-            navigator.clipboard.writeText("kevin.nedell@abbgymnasiet.se");
-            alert("Copied Kevin's mail to the clipboard");
-        }
-    </script>
+      <script src="About.js"></script>
 </body>
 </html>
