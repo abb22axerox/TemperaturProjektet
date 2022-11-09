@@ -1,3 +1,51 @@
+// Your web app's Firebase configuration
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDzJMZg8uoitcrbyop9PPu5aQpuw2ja38Q",
+  authDomain: "test-7552f.firebaseapp.com",
+  databaseURL: "https://test-7552f-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "test-7552f",
+  storageBucket: "test-7552f.appspot.com",
+  messagingSenderId: "107856682690",
+  appId: "1:107856682690:web:599547b5814614132be55b"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+const db = firebase.database();
+
+var room3Ref = db.ref("rum2");
+
+let timeList = []
+
+let tempList = []
+
+room3Ref.once("value").then((snapshot) => {
+  let r2r = snapshot.val()
+  // console.log(r2r)
+  let tempTime = r2r.split(',')
+  // console.log(tempTime)
+  let IDKWhatToNameThis = []
+  for(i = 0; i < tempTime.length; i++){
+      IDKWhatToNameThis.push(tempTime[i].split(' '))
+      // console.log(IDKWhatToNameThis)
+      }
+  
+  for(i=0; i < IDKWhatToNameThis.length; i++){
+      timeList.push(IDKWhatToNameThis[i][0])
+      // console.log(timeList)
+  }
+
+  for(i=0; i < IDKWhatToNameThis.length; i++){
+      tempList.push(IDKWhatToNameThis[i][1])
+      // console.log(tempList)
+  }
+  console.log(timeList)
+  console.log(tempList)
+})
+
+
 //Load the graph
 graphFunction()
 
@@ -5,9 +53,9 @@ graphFunction()
 var a = 0
 var b = 0
 
-var timeArray = [0,10,25]
+var timeArray = timeList
 
-// console.log(timeList)
+console.log(timeList)
 
 //Temperature
   // Sensor 1
@@ -20,8 +68,6 @@ var timeArray = [0,10,25]
   var temp4Array = [0]
   // Sensor 5
   var temp5Array = [0]
-  //SMHI??
-  // var tempSArray = [0]
 
 //Humidity
   //Sensor 1
@@ -34,8 +80,6 @@ var timeArray = [0,10,25]
   var hum4Array = [0]
   // Sensor 5
   var hum5Array = [0]
-  //SMHI??
-  // var humSArray = [0]
 
   var chosen = 0
 
@@ -78,7 +122,6 @@ var timeArray = [0,10,25]
     document.getElementById(id="S3").checked = false;
     document.getElementById(id="S4").checked = false;
     document.getElementById(id="S5").checked = false;
-    // document.getElementById(id="SMHI").checked = false;
   }
 
   //Display a trace in the graph if temperature (chosen = 1) or humidity (chosen = 2) 
@@ -92,7 +135,7 @@ var timeArray = [0,10,25]
   sensor1.addEventListener('change', function () {
     if (sensor1.checked) {
       if(chosen == 1){
-        temp1Array = [8,19,44]
+        temp1Array = tempList
         graphFunction()
       }
       if(chosen == 2){
@@ -225,33 +268,14 @@ var timeArray = [0,10,25]
     })
     })
 
-  //SMHI??
-  // document.addEventListener('DOMContentLoaded', function () {
-  //   var sensorS = document.querySelector('input[id="SMHI"]')
+  //The different sensor names from the settings tab
+  //Recieving data from local storage
+  var traceName1 = localStorage.getItem("sensor1Name")
+  var traceName2 = localStorage.getItem("sensor2Name")
+  var traceName3 = localStorage.getItem("sensor3Name")
+  var traceName4 = localStorage.getItem("sensor4Name")
+  var traceName5 = localStorage.getItem("sensor5Name")
 
-  //   sensorS.addEventListener('change', function () {
-  //     if (sensorS.checked) {
-  //       if(chosen == 1){
-  //         tempSArray = [8,19,44]
-  //         graphFunction()
-  //       }
-  //       if(chosen == 2){
-  //         humSArray = [4,30,20]
-  //         graphFunction()
-  //       }
-  //       if(chosen == 0){
-  //       alert("Please press the Temperature/Humidity button first")
-  //       document.getElementById(id="SS").checked = false;
-  //       }
-  //     } else{
-  //       tempSArray = [0]
-  //       graphFunction()
-
-  //       humSArray = [0]
-  //       graphFunction()
-  //     }
-  //   })
-  //   })
 
 //The graph function plots the traces. It can make them in different colours.
 //Each trace gets a label name per sensor. 
@@ -261,19 +285,19 @@ function graphFunction() {
   var data = [
     //Temperature
     {x: timeArray, y: temp1Array, mode:"lines+markers", 
-    line: {color: 'rgb(255,0,0)', width: 3}, name:"Sensor 1 Temp"},
+    line: {color: 'rgb(255,0,0)', width: 3}, name: traceName1},
 
     {x: timeArray, y: temp2Array, mode:"lines+markers", 
-    line: {color: 'rgb(0,255,0)', width: 3}, name:"Sensor 2 Temp"},
+    line: {color: 'rgb(0,255,0)', width: 3}, name: traceName2},
 
     {x: timeArray, y: temp3Array, mode:"lines+markers", 
-    line: {color: 'rgb(0,0,255)', width: 3}, name:"Sensor 3 Temp"},
+    line: {color: 'rgb(0,0,255)', width: 3}, name: traceName3},
 
     {x: timeArray, y: temp4Array, mode:"lines+markers", 
-    line: {color: 'rgb(0,255,255)', width: 3}, name:"Sensor 4 Temp"},
+    line: {color: 'rgb(0,255,255)', width: 3}, name: traceName4},
 
     {x: timeArray, y: temp5Array, mode:"lines+markers", 
-    line: {color: 'rgb(255,255,0)', width: 3}, name:"Sensor 5 Temp"},
+    line: {color: 'rgb(255,255,0)', width: 3}, name: traceName5},
 
     // {x: timeArray, y: tempSArray, mode:"lines+markers", 
     // line: {color: 'rgb(0,0,0)', width: 3}, name:"SMHI Temp"}
@@ -283,19 +307,19 @@ function graphFunction() {
     data = [
     //Humidity
     {x: timeArray, y: hum1Array, mode:"lines+markers", 
-    line: {color: 'rgb(255,0,0)', width: 3}, name:"Sensor 1 Hum"},
+    line: {color: 'rgb(255,0,0)', width: 3}, name: traceName1},
 
     {x: timeArray, y: hum2Array, mode:"lines+markers", 
-    line: {color: 'rgb(0,255,0)', width: 3}, name:"Sensor 2 Hum"},
+    line: {color: 'rgb(0,255,0)', width: 3}, name: traceName2},
 
     {x: timeArray, y: hum3Array, mode:"lines+markers", 
-    line: {color: 'rgb(0,0,255)', width: 3}, name:"Sensor 3 Hum"},
+    line: {color: 'rgb(0,0,255)', width: 3}, name: traceName3},
 
     {x: timeArray, y: hum4Array, mode:"lines+markers", 
-    line: {color: 'rgb(0,255,255)', width: 3}, name:"Sensor 4 Hum"},
+    line: {color: 'rgb(0,255,255)', width: 3}, name: traceName4},
 
     {x: timeArray, y: hum5Array, mode:"lines+markers", 
-    line: {color: 'rgb(255,255,0)', width: 3}, name:"Sensor 5 Hum"},
+    line: {color: 'rgb(255,255,0)', width: 3}, name: traceName5},
 
     // {x: timeArray, y: humSArray, mode:"lines+markers", 
     // line: {color: 'rgb(0,0,0)', width: 3}, name:"SMHI Hum"}
