@@ -349,11 +349,10 @@ function graphFunction() {
 // Axel Roxenborg
 
 // Changing the buttons' appearance while active
-// Sensor button section can be simplified using code from graph switcher section
-  let S1 = document.getElementById("S1")
-  let S1Label = document.getElementById("S1Label")
-
-  S1.onchange = function(){
+// using class instead of style clutters the css
+// but i dont know how to make the css outrank the js style changes
+// so theres no .class:hover when using style
+  function S1Style(){
     if (S1.checked){
       S1Label.className = "switch1Active"
     } else {
@@ -361,10 +360,7 @@ function graphFunction() {
     }
   }
 
-  let S2 = document.getElementById("S2")
-  let S2Label = document.getElementById("S2Label")
-
-  S2.onchange = function(){
+  function S2Style(){
     if (S2.checked){
       S2Label.className = "switch2Active"
     } else {
@@ -372,10 +368,7 @@ function graphFunction() {
     }
   }
 
-  let S3 = document.getElementById("S3")
-  let S3Label = document.getElementById("S3Label")
-
-  S3.onchange = function(){
+  function S3Style(){
     if (S3.checked){
       S3Label.className = "switch1Active"
     } else {
@@ -383,10 +376,7 @@ function graphFunction() {
     }
   }
 
-  let S4 = document.getElementById("S4")
-  let S4Label = document.getElementById("S4Label")
-
-  S4.onchange = function(){
+  function S4Style(){
     if (S4.checked){
       S4Label.className = "switch2Active"
     } else {
@@ -394,19 +384,13 @@ function graphFunction() {
     }
   }
 
-  let S5 = document.getElementById("S5")
-  let S5Label = document.getElementById("S5Label")
-
-  S5.onchange = function(){
+  function S5Style(){
     if (S5.checked){
       S5Label.className = "switch1Active"
     } else {
       S5Label.className = "switch1"
     }
   }
-
-  let temp = document.getElementById("temp")
-  let hum = document.getElementById("hum")
 
   function tempStyle(){
     temp.style.borderColor = "white"
