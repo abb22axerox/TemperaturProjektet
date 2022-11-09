@@ -6,18 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="Navigation.css">
 <link rel="stylesheet" href="About.css">
-<script>
-  function theSettingsPage(){
-    window.location.href = "Settings.html"
-  }
-  function aboutUsPage(){
-    window.location.href = "About.html";    // :)
-  } 
-
-  function theGraphPage(){
-    window.location.href = "Graph.html"
-  }
-</script>
 </head>
 <body>
   <div id="navBar">
@@ -35,7 +23,7 @@
     </h1>
     <br>
     <div class="aboutProject">
-      <p>The <strong>"In the hottest team"</strong> project involves measuring temperature and humidity in different rooms and storing the data in a database. The database we have used is Realtime Database in Firebase. The data must be sent from the database to the website. In Basic Group 5, we have chosen to present the data in a graph. You can choose whether you want to see the data for humidity or temperature. The temperature and humidity have been measured over a 24-hour period at one-minute intervals. With the help of the practical input boxes, you can easily enter the times you want to see the temperature/humidity between.</p>
+      <p>The <strong>"I hetaste laget"</strong> project involves measuring temperature and humidity in different rooms and storing the data in a database. The database we have used is Realtime Database in Firebase. The data must be sent from the database to the website. In Basgrupp 5, we have chosen to present the data in a graph. You can choose whether you want to see the data for humidity or temperature. The temperature and humidity have been measured over a 24-hour period at one-minute intervals. With the help of the practical input boxes, you can easily enter the times you want to see the temperature/humidity between.</p>
       <p>Projektet <strong>"I hetaste laget"</strong> går ut på att mäta temperatur och luftfuktighet i olika rum och lagra datan i en databas. Databasen vi har använt oss av är Realtime Database i Firebase. Datan ska från databasen skickas till hemsidan. Vi har i Basgrupp 5 valt att presentera datan i en graf. Man kan välja om man vill se datan för fuktighet eller temperatur. Temperaturen och luftfuktigheten har mätts under ett dygn med intervall på en minut. Med hjälp av de praktiska inmatnings-rutorna kan man enkelt matan in de tidpunkter man vill se temperatur/luftfuktighet mellan.</p>
     </div>
   </div>
@@ -72,28 +60,6 @@
             <button class="copyEmail" onclick="copyEmail5()">Get Email</button>
         </div>
       </div>
-
-    <script>
-        function copyEmail1() {
-            navigator.clipboard.writeText("axel.roxenborg@abbgymnasiet.se");
-            alert("Copied Axel's mail to the clipboard");
-        }
-        function copyEmail2() {
-            navigator.clipboard.writeText("oliver.sarebro@abbgymnasiet.se");
-            alert("Copied Oliver's mail to the clipboard");
-        }
-        function copyEmail3() {
-            navigator.clipboard.writeText("andreas.sananes@abbgymnasiet.se");
-            alert("Copied Andreas mail to the clipboard");
-        }
-        function copyEmail4() {
-            navigator.clipboard.writeText("axel.rosenberg@abbgymnasiet.se");
-            alert("Copied Axel's mail to the clipboard");
-        }
-        function copyEmail5() {
-            navigator.clipboard.writeText("kevin.nedell@abbgymnasiet.se");
-            alert("Copied Kevin's mail to the clipboard");
-        }
-    </script>
+      <script src="About.js"></script>
 </body>
 </html>
