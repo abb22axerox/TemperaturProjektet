@@ -94,7 +94,6 @@ console.log(timeList)
     temp3Array = [0]
     temp4Array = [0]
     temp5Array = [0]
-    // tempSArray = [0]
     chosen = 1
     graphFunction()
     //Reset checkboxes
@@ -103,7 +102,6 @@ console.log(timeList)
     document.getElementById(id="S3").checked = false;
     document.getElementById(id="S4").checked = false;
     document.getElementById(id="S5").checked = false;
-    // document.getElementById(id="SMHI").checked = false;
   }
   
   function humFunction(){
@@ -349,3 +347,83 @@ function graphFunction() {
   Plotly.newPlot("myPlot", data, layout)
 }
 // Axel Roxenborg
+
+// Changing the buttons' appearance while active
+// Sensor button section can be simplified using code from graph switcher section
+  let S1 = document.getElementById("S1")
+  let S1Label = document.getElementById("S1Label")
+
+  S1.onchange = function(){
+    if (S1.checked){
+      S1Label.className = "switch1Active"
+    } else {
+      S1Label.className = "switch1"
+    }
+  }
+
+  let S2 = document.getElementById("S2")
+  let S2Label = document.getElementById("S2Label")
+
+  S2.onchange = function(){
+    if (S2.checked){
+      S2Label.className = "switch2Active"
+    } else {
+      S2Label.className = "switch2"
+    }
+  }
+
+  let S3 = document.getElementById("S3")
+  let S3Label = document.getElementById("S3Label")
+
+  S3.onchange = function(){
+    if (S3.checked){
+      S3Label.className = "switch1Active"
+    } else {
+      S3Label.className = "switch1"
+    }
+  }
+
+  let S4 = document.getElementById("S4")
+  let S4Label = document.getElementById("S4Label")
+
+  S4.onchange = function(){
+    if (S4.checked){
+      S4Label.className = "switch2Active"
+    } else {
+      S4Label.className = "switch2"
+    }
+  }
+
+  let S5 = document.getElementById("S5")
+  let S5Label = document.getElementById("S5Label")
+
+  S5.onchange = function(){
+    if (S5.checked){
+      S5Label.className = "switch1Active"
+    } else {
+      S5Label.className = "switch1"
+    }
+  }
+
+  let temp = document.getElementById("temp")
+  let hum = document.getElementById("hum")
+
+  function tempStyle(){
+    temp.style.borderColor = "white"
+    hum.style.borderColor = "black"
+      S1Label.className = "switch1"
+      S2Label.className = "switch2"
+      S3Label.className = "switch1"
+      S4Label.className = "switch2"
+      S5Label.className = "switch1"
+  }
+
+  function humStyle(){
+    hum.style.borderColor = "white"
+    temp.style.borderColor = "black"
+    S1Label.className = "switch1"
+    S2Label.className = "switch2"
+    S3Label.className = "switch1"
+    S4Label.className = "switch2"
+    S5Label.className = "switch1"
+  }

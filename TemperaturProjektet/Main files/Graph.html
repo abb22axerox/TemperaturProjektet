@@ -38,8 +38,8 @@
   <div id="graphBody">
 
     <div id="graphSwitcherDiv">
-      <button class="button" id="tempButton" onclick="tempFunction()"><strong>Temperature</strong></button>
-      <button class="button" id="humButton" onclick="humFunction()"><strong>Humidity</strong></button>
+      <button class="tempButton" id="temp" onclick="tempFunction(); tempStyle()"><strong>Temperature</strong></button>
+      <button class="humButton" id="hum" onclick="humFunction(); humStyle()"><strong>Humidity</strong></button>
     </div>
 
     <div id="centre">
@@ -63,27 +63,27 @@
       </form>
 
       <div id="sensorButtonsDiv">
-        <label class="switch" id="S1Label">
+        <label class="switch1" id="S1Label">
           <input type="checkbox" id="S1">
         <span class="sensorSpan">S1</span>
         </label>
 
-        <label class="switch" id="S2Label">
+        <label class="switch2" id="S2Label">
           <input type="checkbox" id="S2">
         <span class="sensorSpan">S2</span>
         </label>
 
-        <label class="switch" id="S3Label">
+        <label class="switch1" id="S3Label">
           <input type="checkbox" id="S3">
         <span class="sensorSpan">S3</span>
         </label>
 
-        <label class="switch" id="S4Label">
+        <label class="switch2" id="S4Label">
           <input type="checkbox" id="S4">
         <span class="sensorSpan">S4</span>
         </label>
 
-        <label class="switch" id="S5Label">
+        <label class="switch1" id="S5Label">
           <input type="checkbox" id="S5">
         <span class="sensorSpan">S5</span>
         </label>
