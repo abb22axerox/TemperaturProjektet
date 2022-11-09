@@ -135,7 +135,7 @@ body {
 
 #graphSwitcherDiv {
     width: 12.5%;
-    height: 700px;
+    height: 600px;
     justify-self: flex-start;
 }
 .tempButton {
@@ -180,7 +180,7 @@ body {
 */
 .filler {
     width: 12.5%;
-    height: 700px;
+    height: 600px;
 }
 
 img.background {
