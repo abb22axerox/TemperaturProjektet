@@ -10,7 +10,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Graph - I Hetaste Laget</title>
 </head>
-
 <body> 
   <img class="background" src="Vasteras_Finnslatten_Markperspektiv_190703_utan_logga_ALV_EJ-FRI-ANV-2048x1024-1.jpg" alt="backG">
   <!--header-->
@@ -22,20 +21,15 @@
       <button class="navButton" id="navTheSettings" onclick="theSettingsPage()">Settings</button>
     </div>
   </div>
-  
   <div id="graphBody">
-
     <!--temp/hum selector-->
     <div id="graphSwitcherDiv">
       <button class="tempButton" id="temp" onclick="tempFunction(); tempStyle()"><strong>Temperature</strong></button>
       <button class="humButton" id="hum" onclick="humFunction(); humStyle()"><strong>Humidity</strong></button>
     </div>
-
     <div id="centre">
-
       <!--the graph-->
       <div id="myPlot"></div>
-    
       <!--time selector and refresh button-->
       <form id="timeDivDiv">
         <div id="timeDiv">
@@ -52,29 +46,24 @@
         </div>
         <input type="button" id="refreshButton" value="" onclick="refreshFunction()">
       </form>
-
       <!--sensor selector-->
       <div id="sensorButtonsDiv">
         <label class="sensorButton1" id="S1Label">
           <input type="checkbox" id="S1" onchange="S1Style()">
         <span class="sensorSpan">S1</span>
         </label>
-
         <label class="sensorButton2" id="S2Label">
           <input type="checkbox" id="S2" onchange="S2Style()">
         <span class="sensorSpan">S2</span>
         </label>
-
         <label class="sensorButton1" id="S3Label">
           <input type="checkbox" id="S3" onchange="S3Style()">
         <span class="sensorSpan">S3</span>
         </label>
-
         <label class="sensorButton2" id="S4Label">
           <input type="checkbox" id="S4" onchange="S4Style()">
         <span class="sensorSpan">S4</span>
         </label>
-
         <label class="sensorButton1" id="S5Label">
           <input type="checkbox" id="S5" onchange="S5Style()">
         <span class="sensorSpan">S5</span>
@@ -86,10 +75,9 @@
   <footer>
     <p class="image-source">Image: "Framtida Finnslätten"</p>
   </footer>
-
   <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
   <script src="Graph.js"></script>
-  <!-- <script src="Settings.js"></script> -->
+  <script src="Navigation.js"></script>
 </body>
 </html>

@@ -33,20 +33,20 @@ function getData(){
 
     //Add default names
     if(sensor1Name == ""){
-        localStorage.setItem("sensor1Name", "Sensor 1")
+        localStorage.setItem("sensor1Name", "Växthuset")
         console.log("yes")
     }
     if(sensor2Name == ""){
-        localStorage.setItem("sensor2Name", "Sensor 2")
+        localStorage.setItem("sensor2Name", "Pingisrummet")
     }
     if(sensor3Name == ""){
-        localStorage.setItem("sensor3Name", "Sensor 3")
+        localStorage.setItem("sensor3Name", "Hyllorna")
     }
     if(sensor4Name == ""){
-        localStorage.setItem("sensor4Name", "Sensor 4")
+        localStorage.setItem("sensor4Name", "Toaletten")
     }
     if(sensor5Name == ""){
-        localStorage.setItem("sensor5Name", "Sensor 5")
+        localStorage.setItem("sensor5Name", "Vardagsrummet")
     }
     alert("Saved successfully!")
 }

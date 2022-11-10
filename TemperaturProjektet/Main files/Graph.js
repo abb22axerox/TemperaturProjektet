@@ -1,3 +1,4 @@
+//Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyC1Z3eWF5XuyBvX8XPetVs76hy5osSA6KM",
   authDomain: "skogens-thm.firebaseapp.com",
@@ -113,9 +114,6 @@ room5Ref.once("value").then((snapshot) => {
   }
 })
 
-console.log(tempList5)
-console.log(humList5)
-
 //Define variables
 let tempArray1
 let tempArray2
@@ -149,7 +147,6 @@ var b = 0
     tempArray3 = [0]
     tempArray4 = [0]
     tempArray5 = [0]
-    // tempSArray = [0]
     chosen = 1
     graphFunction()
     //Reset checkboxes
@@ -167,7 +164,6 @@ var b = 0
     humArray3 = [0]
     humArray3 = [0]
     humArray5 = [0]
-    // humSArray = [0]
     chosen = 2
     graphFunction()
     //Reset checkboxes
