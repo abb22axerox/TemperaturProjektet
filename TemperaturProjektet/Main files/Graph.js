@@ -349,7 +349,6 @@ function graphFunction() {
 // Axel Roxenborg
 
 // Changing the buttons' appearance while active
-// can use .style... instead of .className but that will have higher prio than the css file
   function S1Style(){
     if (S1.checked){
       S1Label.className = "sensorButton1Active"
@@ -393,6 +392,7 @@ function graphFunction() {
   function tempStyle(){
     temp.className = "tempButtonActive"
     hum.className = "humButton"
+    //since temp and hum reset the sensor buttons:
       S1Label.className = "sensorButton1"
       S2Label.className = "sensorButton2"
       S3Label.className = "sensorButton1"
@@ -409,3 +409,4 @@ function graphFunction() {
     S4Label.className = "sensorButton2"
     S5Label.className = "sensorButton1"
   }
+  // Sarebro

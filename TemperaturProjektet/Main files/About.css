@@ -28,11 +28,6 @@ body{
     width: 70%;
 }
 
-#contactInfo {
-    margin-top: 2%;
-    margin-left: 5%;
-}
-
 .contacts {
     display: flex;
     flex-direction: row;
