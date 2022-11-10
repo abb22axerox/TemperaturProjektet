@@ -95,9 +95,8 @@ img.background {
 
 #sensorButtonsDiv {
     margin-top: 20px;
-    border: 1px black solid;
-    width: 30%;
-    height: 3.5%;
+    width: 35%;
+    height: 4%;
     display: flex;
     justify-content: center;
 }
@@ -112,6 +111,18 @@ img.background {
 }   .sensorButton1 input {opacity: 0; height: 0px; width: 0;}
     .sensorButton1:hover {opacity: 85%; border: 1px black solid;}
 
+.sensorButton1Active {
+    background-color: rgb(220, 0, 0);   
+    border: 1px white solid;
+    opacity: 75%;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   .sensorButton1Active input {opacity: 0; height: 0px; width: 0;}
+    .sensorButton1Active:hover {opacity: 85%; border: 1px black solid;}    
+
 .sensorButton2 {
     background-color: rgb(255, 82, 75);
     width: 20%;
@@ -122,20 +133,10 @@ img.background {
 }   .sensorButton2 input {opacity: 0; height: 0px; width: 0;}
     .sensorButton2:hover {opacity: 85%; border: 1px black solid;}
 
-.sensorButton1Active {
-    background-color: rgb(220, 0, 0);   
-    opacity: 50%;
-    width: 20%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}   .sensorButton1Active input {opacity: 0; height: 0px; width: 0;}
-    .sensorButton1Active:hover {opacity: 85%; border: 1px black solid;}
-    
 .sensorButton2Active {
     background-color: rgb(255, 82, 75);   
-    opacity: 50%;
+    border: 1px white solid;
+    opacity: 75%;
     width: 20%;
     height: 100%;
     display: flex;
