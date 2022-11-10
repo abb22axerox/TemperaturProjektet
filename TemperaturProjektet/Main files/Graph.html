@@ -13,6 +13,7 @@
 
 <body> 
   <img class="background" src="Vasteras_Finnslatten_Markperspektiv_190703_utan_logga_ALV_EJ-FRI-ANV-2048x1024-1.jpg" alt="backG">
+  <!--header-->
   <div id="navBar">
     <button id="iHetasteLaget"><strong>I Hetaste Laget</strong></button>
     <div id="navButtonsDiv">
@@ -24,6 +25,7 @@
   
   <div id="graphBody">
 
+    <!--temp/hum selector-->
     <div id="graphSwitcherDiv">
       <button class="tempButton" id="temp" onclick="tempFunction(); tempStyle()"><strong>Temperature</strong></button>
       <button class="humButton" id="hum" onclick="humFunction(); humStyle()"><strong>Humidity</strong></button>
@@ -31,8 +33,10 @@
 
     <div id="centre">
 
+      <!--the graph-->
       <div id="myPlot"></div>
     
+      <!--time selector and refresh button-->
       <form id="timeDivDiv">
         <div id="timeDiv">
           <div id="startTimeDiv">
@@ -49,6 +53,7 @@
         <input type="reset" id="refreshButton" value="" onclick="refreshFunction()">
       </form>
 
+      <!--sensor selector-->
       <div id="sensorButtonsDiv">
         <label class="sensorButton1" id="S1Label">
           <input type="checkbox" id="S1" onchange="S1Style()">
