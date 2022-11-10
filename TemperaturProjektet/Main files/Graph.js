@@ -162,7 +162,7 @@ var b = 0
     humArray1 = [0]
     humArray2 = [0]
     humArray3 = [0]
-    humArray3 = [0]
+    humArray4 = [0]
     humArray5 = [0]
     chosen = 2
     graphFunction()
