@@ -41,7 +41,7 @@ img.background {
 #myPlot {
     margin-top: 25px;
     width: 85%;
-    height: 65%;
+    height: 60%;
 }
 
 #timeDivDiv {
@@ -108,19 +108,18 @@ img.background {
     justify-content: center;
     align-items: center;
 }   .sensorButton1 input {opacity: 0; height: 0px; width: 0;}
-    .sensorButton1:hover {opacity: 85%; border: 1px black solid;}
+    .sensorButton1:hover {border: 2px white solid;}
 
 .sensorButton1Active {
     background-color: rgb(220, 0, 0);   
-    border: 1px white solid;
-    opacity: 75%;
+    border: 2px white solid;
     width: 20%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }   .sensorButton1Active input {opacity: 0; height: 0px; width: 0;}
-    .sensorButton1Active:hover {opacity: 85%; border: 1px black solid;}    
+    .sensorButton1Active:hover {border: 0;}    
 
 .sensorButton2 {
     background-color: rgb(255, 82, 75);
@@ -130,19 +129,18 @@ img.background {
     justify-content: center;
     align-items: center;
 }   .sensorButton2 input {opacity: 0; height: 0px; width: 0;}
-    .sensorButton2:hover {opacity: 85%; border: 1px black solid;}
+    .sensorButton2:hover {border: 2px white solid;}
 
 .sensorButton2Active {
     background-color: rgb(255, 82, 75);   
-    border: 1px white solid;
-    opacity: 75%;
+    border: 2px white solid;
     width: 20%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }   .sensorButton2Active input {opacity: 0; height: 0px; width: 0;}
-    .sensorButton2Active:hover {opacity: 85%; border: 1px black solid;}
+    .sensorButton2Active:hover {border: 0;}
 
 #graphSwitcherDiv {
     width: 12.5%;
