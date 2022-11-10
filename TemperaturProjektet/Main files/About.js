@@ -1,14 +1,3 @@
-function theSettingsPage(){
-    window.location.href = "Settings.html"
-}
-function aboutUsPage(){
-    window.location.href = "About.html";    // :)
-} 
-
-function theGraphPage(){
-    window.location.href = "Graph.html"
-}
-
 function copyEmail1() {
     navigator.clipboard.writeText("axel.roxenborg@abbgymnasiet.se");
     alert("Copied Axel Rosenberg's mail to the clipboard");
