@@ -7,6 +7,17 @@ body {
     
 }
 
+img.background {
+    position: absolute;
+    left: 0px;
+    top: 55px;
+    z-index: -1;
+    width: 100%;
+    height: 110%;
+    -webkit-filter: blur(2px); /* Safari 6.0 - 9.0 */
+    filter: blur(5px);
+}
+
 .background {
     width: 100%;
     height: 100%;
@@ -91,27 +102,27 @@ body {
     justify-content: center;
 }
 
-.switch1 {
+.sensorButton1 {
     background-color: rgb(220, 0, 0);
     width: 20%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}   .switch1 input {opacity: 0; height: 0px; width: 0;}
-    .switch1:hover {opacity: 85%; border: 1px black solid;}
+}   .sensorButton1 input {opacity: 0; height: 0px; width: 0;}
+    .sensorButton1:hover {opacity: 85%; border: 1px black solid;}
 
-.switch2 {
+.sensorButton2 {
     background-color: rgb(255, 82, 75);
     width: 20%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}   .switch2 input {opacity: 0; height: 0px; width: 0;}
-    .switch2:hover {opacity: 85%; border: 1px black solid;}
+}   .sensorButton2 input {opacity: 0; height: 0px; width: 0;}
+    .sensorButton2:hover {opacity: 85%; border: 1px black solid;}
 
-.switch1Active {
+.sensorButton1Active {
     background-color: rgb(220, 0, 0);   
     opacity: 50%;
     width: 20%;
@@ -119,10 +130,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}   .switch1Active input {opacity: 0; height: 0px; width: 0;}
-    .switch1Active:hover {opacity: 85%; border: 1px black solid;}
+}   .sensorButton1Active input {opacity: 0; height: 0px; width: 0;}
+    .sensorButton1Active:hover {opacity: 85%; border: 1px black solid;}
     
-.switch2Active {
+.sensorButton2Active {
     background-color: rgb(255, 82, 75);   
     opacity: 50%;
     width: 20%;
@@ -130,8 +141,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}   .switch2Active input {opacity: 0; height: 0px; width: 0;}
-    .switch2Active:hover {opacity: 85%; border: 1px black solid;}
+}   .sensorButton2Active input {opacity: 0; height: 0px; width: 0;}
+    .sensorButton2Active:hover {opacity: 85%; border: 1px black solid;}
 
 #graphSwitcherDiv {
     width: 12.5%;
@@ -149,7 +160,7 @@ body {
     height: 35px;
 }   .tempButton:hover {border: 2px white solid;}
 
-/*.tempButtonActive {
+.tempButtonActive {
     margin-top: 15%;
     margin-bottom: 12px;
     margin-left: 15%;
@@ -158,8 +169,8 @@ body {
     border-radius: 8px;
     width: 100%;
     height: 35px;
-}   .tempButtonActive:hover {border: 2px black solid;}
-*/
+}
+
 .humButton {
     margin-left: 15%;
     background-color: rgb(255, 82, 75);
@@ -169,31 +180,19 @@ body {
     height: 35px;
 }   .humButton:hover {border: 2px white solid;}
 
-/*.humButtonActive {
+.humButtonActive {
     margin-left: 15%;
     background-color: rgb(255, 82, 75);
     border: 2px white solid;
     border-radius: 8px;
     width: 100%;
     height: 35px;
-}   .humButtonActive:hover {border: 2px black solid;}
-*/
+}
+
 .filler {
     width: 12.5%;
     height: 600px;
 }
-
-img.background {
-    position: absolute;
-    left: 0px;
-    top: 55px;
-    z-index: -1;
-    width: 100%;
-    height: 110%;
-    -webkit-filter: blur(2px); /* Safari 6.0 - 9.0 */
-    filter: blur(5px);
-    }
-
 
 footer {
     background-color: white;
