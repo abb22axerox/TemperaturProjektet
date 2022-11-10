@@ -29,13 +29,8 @@ room1Ref.once("value").then((snapshot) => {
       
       tempList1.push(thisOne[1])
       humList1.push(thisOne[2])
-      // timeList.push(Number(thisOne[0])/3600)
   }
 })
-
-console.log(tempList1)
-console.log(humList1)
-
 
 //room2----------------------------------------------------------------
 
@@ -54,14 +49,9 @@ room2Ref.once("value").then((snapshot) => {
       
       tempList2.push(thisOne[1])
       humList2.push(thisOne[2])
-      timeList.push(Number(thisOne[0])/3)
+      timeList.push(Number(thisOne[0])/3600)
   }
 })
-
-console.log(tempList2)
-console.log(humList2)
-console.log(timeList)
-
 
 //room3----------------------------------------------------------------
 
@@ -82,10 +72,6 @@ room3Ref.once("value").then((snapshot) => {
   }
 })
 
-console.log(tempList3)
-console.log(humList3)
-
-
 //room4----------------------------------------------------------------
 
 var room4Ref = db.ref("Rum4");
@@ -104,10 +90,6 @@ room4Ref.once("value").then((snapshot) => {
       humList4.push(thisOne[2])
   }
 })
-
-console.log(tempList4)
-console.log(humList4)
-
 
 //room5----------------------------------------------------------------
 
