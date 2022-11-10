@@ -1,3 +1,4 @@
+//Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyC1Z3eWF5XuyBvX8XPetVs76hy5osSA6KM",
   authDomain: "skogens-thm.firebaseapp.com",
@@ -29,13 +30,8 @@ room1Ref.once("value").then((snapshot) => {
       
       tempList1.push(thisOne[1])
       humList1.push(thisOne[2])
-      // timeList.push(Number(thisOne[0])/3600)
   }
 })
-
-console.log(tempList1)
-console.log(humList1)
-
 
 //room2----------------------------------------------------------------
 
@@ -44,6 +40,8 @@ var room2Ref = db.ref("Rum2");
 let timeList = []
 let tempList2 = []
 let humList2 = []
+//Extra timelist for sensor 1 that we started later
+let timeListExtra = []
 
 room2Ref.once("value").then((snapshot) => {
   let r2r = snapshot.val()
@@ -54,14 +52,10 @@ room2Ref.once("value").then((snapshot) => {
       
       tempList2.push(thisOne[1])
       humList2.push(thisOne[2])
-      timeList.push(Number(thisOne[0])/3600)
+      timeList.push((Number(thisOne[0])/3600)+1)
+      timeListExtra.push((Number(thisOne[0])/3600)+1+2.4)
   }
 })
-
-console.log(tempList2)
-console.log(humList2)
-console.log(timeList)
-
 
 //room3----------------------------------------------------------------
 
@@ -82,10 +76,6 @@ room3Ref.once("value").then((snapshot) => {
   }
 })
 
-console.log(tempList3)
-console.log(humList3)
-
-
 //room4----------------------------------------------------------------
 
 var room4Ref = db.ref("Rum4");
@@ -104,10 +94,6 @@ room4Ref.once("value").then((snapshot) => {
       humList4.push(thisOne[2])
   }
 })
-
-console.log(tempList4)
-console.log(humList4)
-
 
 //room5----------------------------------------------------------------
 
@@ -128,20 +114,18 @@ room5Ref.once("value").then((snapshot) => {
   }
 })
 
-console.log(tempList5)
-console.log(humList5)
+//Define variables
+let tempArray1
+let tempArray2
+let tempArray3
+let tempArray4
+let tempArray5
 
-let tempArray1 = tempList1
-let tempArray2 = tempList2
-let tempArray3 = tempList3
-let tempArray4 = tempList4
-let tempArray5 = tempList5
-
-let humArray1 = humList1
-let humArray2 = humList2
-let humArray3 = humList3
-let humArray4 = humList4
-let humArray5 = humList5
+let humArray1
+let humArray2
+let humArray3
+let humArray4
+let humArray5
 
 //Load the graph
 graphFunction()
@@ -158,12 +142,11 @@ var b = 0
 
   function tempFunction(){
     //Initialize temp arrays to 0
-    temp1Array = [0]
-    temp2Array = [0]
-    temp3Array = [0]
-    temp4Array = [0]
-    temp5Array = [0]
-    // tempSArray = [0]
+    tempArray1 = [0]
+    tempArray2 = [0]
+    tempArray3 = [0]
+    tempArray4 = [0]
+    tempArray5 = [0]
     chosen = 1
     graphFunction()
     //Reset checkboxes
@@ -179,9 +162,8 @@ var b = 0
     humArray1 = [0]
     humArray2 = [0]
     humArray3 = [0]
-    humArray3 = [0]
+    humArray4 = [0]
     humArray5 = [0]
-    // humSArray = [0]
     chosen = 2
     graphFunction()
     //Reset checkboxes
@@ -203,10 +185,11 @@ var b = 0
   sensor1.addEventListener('change', function () {
     if (sensor1.checked) {
       if(chosen == 1){
-        // tempArray1 = tempList
+        tempArray1 = tempList1
         graphFunction()
       }
       if(chosen == 2){
+        humArray1 = humList1
         graphFunction()
       }
       if(chosen == 0){
@@ -215,17 +198,13 @@ var b = 0
       }
     } else{
       tempArray1 = [0]
-      // console.log(tempArray1)
       graphFunction()
 
       humArray1 = [0]
       graphFunction()
     }
-    tempArray1 = tempList1
-    humArray1 = humList1
   })
   })
-  // console.log(tempArray1)
 
   //Sensor 2
   document.addEventListener('DOMContentLoaded', function () {
@@ -234,9 +213,11 @@ var b = 0
     sensor2.addEventListener('change', function () {
       if (sensor2.checked) {
         if(chosen == 1){
+          tempArray2 = tempList2
           graphFunction()
         }
         if(chosen == 2){
+          humArray2 = humList2
           graphFunction()
         }
         if(chosen == 0){
@@ -250,8 +231,6 @@ var b = 0
         humArray2 = [0]
         graphFunction()
       }
-      tempArray2 = tempList2
-      humArray2 = humList2
     })
     })
 
@@ -262,9 +241,11 @@ var b = 0
     sensor3.addEventListener('change', function () {
       if (sensor3.checked) {
         if(chosen == 1){
+          tempArray3 = tempList3
           graphFunction()
         }
         if(chosen == 2){
+          humArray3 = humList3
           graphFunction()
         }
         if(chosen == 0){
@@ -278,8 +259,6 @@ var b = 0
         humArray3 = [0]
         graphFunction()
       }
-      tempArray3 = tempList3
-      humArray3 = humList3
     })
     })
 
@@ -290,9 +269,11 @@ var b = 0
     sensor4.addEventListener('change', function () {
       if (sensor4.checked) {
         if(chosen == 1){
+          tempArray4 = tempList4
           graphFunction()
         }
         if(chosen == 2){
+          humArray4 = humList4
           graphFunction()
         }
         if(chosen == 0){
@@ -306,8 +287,6 @@ var b = 0
         humArray4 = [0]
         graphFunction()
       }
-      tempArray4 = tempList4
-      humArray4 = humList4
     })
     })
 
@@ -318,9 +297,11 @@ var b = 0
     sensor5.addEventListener('change', function () {
       if (sensor5.checked) {
         if(chosen == 1){
+          tempArray5 = tempList5
           graphFunction()
         }
         if(chosen == 2){
+          humArray5 = humList5
           graphFunction()
         }
         if(chosen == 0){
@@ -334,8 +315,6 @@ var b = 0
         humArray5 = [0]
         graphFunction()
       }
-      tempArray5 = tempList5
-      humArray5 = humList5
     })
     })
 
@@ -355,7 +334,7 @@ function graphFunction() {
   if (chosen == 1){
   var data = [
     //Temperature
-    {x: timeList, y: tempArray1, mode:"lines+markers", 
+    {x: timeListExtra, y: tempArray1, mode:"lines+markers", 
     line: {color: 'rgb(255,0,0)', width: 3}, name: traceName1},
 
     {x: timeList, y: tempArray2, mode:"lines+markers", 
@@ -377,7 +356,7 @@ function graphFunction() {
   if(chosen == 2){
     data = [
     //Humidity
-    {x: timeList, y: humArray1, mode:"lines+markers", 
+    {x: timeListExtra, y: humArray1, mode:"lines+markers", 
     line: {color: 'rgb(255,0,0)', width: 3}, name: traceName1},
 
     {x: timeList, y: humArray2, mode:"lines+markers", 
@@ -386,7 +365,7 @@ function graphFunction() {
     {x: timeList, y: humArray3, mode:"lines+markers", 
     line: {color: 'rgb(0,0,255)', width: 3}, name: traceName3},
 
-    {x: timeList, y: humArray3, mode:"lines+markers", 
+    {x: timeList, y: humArray4, mode:"lines+markers", 
     line: {color: 'rgb(0,255,255)', width: 3}, name: traceName4},
 
     {x: timeList, y: humArray5, mode:"lines+markers", 
@@ -404,14 +383,14 @@ function graphFunction() {
   if (chosen == 1){
     var layout = {
       xaxis: {range: [a, b], title: "Time (Hours)"},
-      yaxis: {range: [0, 50], title: "Temperature (°C)"},
+      yaxis: {range: [20, 26], title: "Temperature (°C)"},
       title: "Temperature"
     }
   }
   if (chosen == 2){
     var layout = {
       xaxis: {range: [a, b], title: "Time (Hours)"},
-      yaxis: {range: [0, 50], title: "Humidity (%)"},
+      yaxis: {range: [37, 48], title: "Humidity (%)"},
       title: "Humidity"
     }
   }
@@ -420,6 +399,9 @@ function graphFunction() {
   Plotly.newPlot("myPlot", data, layout)
 }
 // Axel Roxenborg
+
+
+
 
 // Changing the buttons' appearance while active
   function S1Style(){
@@ -482,4 +464,4 @@ function graphFunction() {
     S4Label.className = "sensorButton2"
     S5Label.className = "sensorButton1"
   }
-  // Sarebro
+  // Oliver Sarebro
