@@ -39,6 +39,8 @@ var room2Ref = db.ref("Rum2");
 let timeList = []
 let tempList2 = []
 let humList2 = []
+//Extra timelist for sensor 1 that we started later
+let timeListExtra = []
 
 room2Ref.once("value").then((snapshot) => {
   let r2r = snapshot.val()
@@ -49,7 +51,8 @@ room2Ref.once("value").then((snapshot) => {
       
       tempList2.push(thisOne[1])
       humList2.push(thisOne[2])
-      timeList.push(Number(thisOne[0])/3600)
+      timeList.push((Number(thisOne[0])/3600)+1)
+      timeListExtra.push((Number(thisOne[0])/3600)+1+2.4)
   }
 })
 
@@ -185,7 +188,6 @@ var b = 0
   sensor1.addEventListener('change', function () {
     if (sensor1.checked) {
       if(chosen == 1){
-        // tempArray1 = tempList
         graphFunction()
       }
       if(chosen == 2){
@@ -197,7 +199,6 @@ var b = 0
       }
     } else{
       tempArray1 = [0]
-      // console.log(tempArray1)
       graphFunction()
 
       humArray1 = [0]
@@ -207,7 +208,6 @@ var b = 0
     humArray1 = humList1
   })
   })
-  // console.log(tempArray1)
 
   //Sensor 2
   document.addEventListener('DOMContentLoaded', function () {
@@ -337,7 +337,7 @@ function graphFunction() {
   if (chosen == 1){
   var data = [
     //Temperature
-    {x: timeList, y: tempArray1, mode:"lines+markers", 
+    {x: timeListExtra, y: tempArray1, mode:"lines+markers", 
     line: {color: 'rgb(255,0,0)', width: 3}, name: traceName1},
 
     {x: timeList, y: tempArray2, mode:"lines+markers", 
@@ -359,7 +359,7 @@ function graphFunction() {
   if(chosen == 2){
     data = [
     //Humidity
-    {x: timeList, y: humArray1, mode:"lines+markers", 
+    {x: timeListExtra, y: humArray1, mode:"lines+markers", 
     line: {color: 'rgb(255,0,0)', width: 3}, name: traceName1},
 
     {x: timeList, y: humArray2, mode:"lines+markers", 
@@ -368,7 +368,7 @@ function graphFunction() {
     {x: timeList, y: humArray3, mode:"lines+markers", 
     line: {color: 'rgb(0,0,255)', width: 3}, name: traceName3},
 
-    {x: timeList, y: humArray3, mode:"lines+markers", 
+    {x: timeList, y: humArray4, mode:"lines+markers", 
     line: {color: 'rgb(0,255,255)', width: 3}, name: traceName4},
 
     {x: timeList, y: humArray5, mode:"lines+markers", 
@@ -393,7 +393,7 @@ function graphFunction() {
   if (chosen == 2){
     var layout = {
       xaxis: {range: [a, b], title: "Time (Hours)"},
-      yaxis: {range: [0, 50], title: "Humidity (%)"},
+      yaxis: {range: [39, 54], title: "Humidity (%)"},
       title: "Humidity"
     }
   }
@@ -402,6 +402,9 @@ function graphFunction() {
   Plotly.newPlot("myPlot", data, layout)
 }
 // Axel Roxenborg
+
+
+
 
 // Changing the buttons' appearance while active
   function S1Style(){
@@ -464,4 +467,4 @@ function graphFunction() {
     S4Label.className = "sensorButton2"
     S5Label.className = "sensorButton1"
   }
-  // Sarebro
+  // Oliver Sarebro
