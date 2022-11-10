@@ -387,14 +387,14 @@ function graphFunction() {
   if (chosen == 1){
     var layout = {
       xaxis: {range: [a, b], title: "Time (Hours)"},
-      yaxis: {range: [20, 30], title: "Temperature (°C)"},
+      yaxis: {range: [20, 26], title: "Temperature (°C)"},
       title: "Temperature"
     }
   }
   if (chosen == 2){
     var layout = {
       xaxis: {range: [a, b], title: "Time (Hours)"},
-      yaxis: {range: [39, 54], title: "Humidity (%)"},
+      yaxis: {range: [37, 48], title: "Humidity (%)"},
       title: "Humidity"
     }
   }
