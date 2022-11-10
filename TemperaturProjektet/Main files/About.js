@@ -1,6 +1,6 @@
 function copyEmail1() {
     navigator.clipboard.writeText("axel.roxenborg@abbgymnasiet.se");
-    alert("Copied Axel Rosenberg's mail to the clipboard");
+    alert("Copied Axel Roxenborg's mail to the clipboard");
 }
 function copyEmail2() {
     navigator.clipboard.writeText("oliver.sarebro@abbgymnasiet.se");
@@ -12,7 +12,7 @@ function copyEmail3() {
 }
 function copyEmail4() {
     navigator.clipboard.writeText("axel.rosenberg@abbgymnasiet.se");
-    alert("Copied Axel Roxenborg's mail to the clipboard");
+    alert("Copied Axel Rosenberg's mail to the clipboard");
 }
 function copyEmail5() {
     navigator.clipboard.writeText("kevin.nedell@abbgymnasiet.se");
