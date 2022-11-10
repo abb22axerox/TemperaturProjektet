@@ -116,17 +116,18 @@ room5Ref.once("value").then((snapshot) => {
 console.log(tempList5)
 console.log(humList5)
 
-let tempArray1 = tempList1
-let tempArray2 = tempList2
-let tempArray3 = tempList3
-let tempArray4 = tempList4
-let tempArray5 = tempList5
+//Define variables
+let tempArray1
+let tempArray2
+let tempArray3
+let tempArray4
+let tempArray5
 
-let humArray1 = humList1
-let humArray2 = humList2
-let humArray3 = humList3
-let humArray4 = humList4
-let humArray5 = humList5
+let humArray1
+let humArray2
+let humArray3
+let humArray4
+let humArray5
 
 //Load the graph
 graphFunction()
@@ -143,11 +144,11 @@ var b = 0
 
   function tempFunction(){
     //Initialize temp arrays to 0
-    temp1Array = [0]
-    temp2Array = [0]
-    temp3Array = [0]
-    temp4Array = [0]
-    temp5Array = [0]
+    tempArray1 = [0]
+    tempArray2 = [0]
+    tempArray3 = [0]
+    tempArray4 = [0]
+    tempArray5 = [0]
     // tempSArray = [0]
     chosen = 1
     graphFunction()
@@ -188,9 +189,11 @@ var b = 0
   sensor1.addEventListener('change', function () {
     if (sensor1.checked) {
       if(chosen == 1){
+        tempArray1 = tempList1
         graphFunction()
       }
       if(chosen == 2){
+        humArray1 = humList1
         graphFunction()
       }
       if(chosen == 0){
@@ -204,8 +207,6 @@ var b = 0
       humArray1 = [0]
       graphFunction()
     }
-    tempArray1 = tempList1
-    humArray1 = humList1
   })
   })
 
@@ -216,9 +217,11 @@ var b = 0
     sensor2.addEventListener('change', function () {
       if (sensor2.checked) {
         if(chosen == 1){
+          tempArray2 = tempList2
           graphFunction()
         }
         if(chosen == 2){
+          humArray2 = humList2
           graphFunction()
         }
         if(chosen == 0){
@@ -232,8 +235,6 @@ var b = 0
         humArray2 = [0]
         graphFunction()
       }
-      tempArray2 = tempList2
-      humArray2 = humList2
     })
     })
 
@@ -244,9 +245,11 @@ var b = 0
     sensor3.addEventListener('change', function () {
       if (sensor3.checked) {
         if(chosen == 1){
+          tempArray3 = tempList3
           graphFunction()
         }
         if(chosen == 2){
+          humArray3 = humList3
           graphFunction()
         }
         if(chosen == 0){
@@ -260,8 +263,6 @@ var b = 0
         humArray3 = [0]
         graphFunction()
       }
-      tempArray3 = tempList3
-      humArray3 = humList3
     })
     })
 
@@ -272,9 +273,11 @@ var b = 0
     sensor4.addEventListener('change', function () {
       if (sensor4.checked) {
         if(chosen == 1){
+          tempArray4 = tempList4
           graphFunction()
         }
         if(chosen == 2){
+          humArray4 = humList4
           graphFunction()
         }
         if(chosen == 0){
@@ -288,8 +291,6 @@ var b = 0
         humArray4 = [0]
         graphFunction()
       }
-      tempArray4 = tempList4
-      humArray4 = humList4
     })
     })
 
@@ -300,9 +301,11 @@ var b = 0
     sensor5.addEventListener('change', function () {
       if (sensor5.checked) {
         if(chosen == 1){
+          tempArray5 = tempList5
           graphFunction()
         }
         if(chosen == 2){
+          humArray5 = humList5
           graphFunction()
         }
         if(chosen == 0){
@@ -316,8 +319,6 @@ var b = 0
         humArray5 = [0]
         graphFunction()
       }
-      tempArray5 = tempList5
-      humArray5 = humList5
     })
     })
 
@@ -386,7 +387,7 @@ function graphFunction() {
   if (chosen == 1){
     var layout = {
       xaxis: {range: [a, b], title: "Time (Hours)"},
-      yaxis: {range: [15, 30], title: "Temperature (°C)"},
+      yaxis: {range: [20, 30], title: "Temperature (°C)"},
       title: "Temperature"
     }
   }
