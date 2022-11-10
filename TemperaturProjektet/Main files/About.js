@@ -1,4 +1,14 @@
-//Copy email button functions
+function theSettingsPage(){
+    window.location.href = "Settings.html"
+}
+function aboutUsPage(){
+    window.location.href = "About.html";    // :)
+} 
+
+function theGraphPage(){
+    window.location.href = "Graph.html"
+}
+
 function copyEmail1() {
     navigator.clipboard.writeText("axel.roxenborg@abbgymnasiet.se")
     alert("Copied Axel Roxenborg's mail to the clipboard")
@@ -12,8 +22,8 @@ function copyEmail3() {
     alert("Copied Andreas Sanane's mail to the clipboard")
 }
 function copyEmail4() {
-    navigator.clipboard.writeText("axel.rosenberg@abbgymnasiet.se")
-    alert("Copied Axel Roseneorg's mail to the clipboard")
+    navigator.clipboard.writeText("axel.rosenberg@abbgymnasiet.se");
+    alert("Copied Axel Roseneorg's mail to the clipboard");
 }
 function copyEmail5() {
     navigator.clipboard.writeText("kevin.nedell@abbgymnasiet.se")
