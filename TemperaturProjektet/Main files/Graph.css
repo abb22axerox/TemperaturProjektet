@@ -1,10 +1,20 @@
 body {
-    background-color: lightblue;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     
+}
+
+img.background {
+    position: absolute;
+    left: 0px;
+    top: 55px;
+    z-index: -1;
+    width: 100%;
+    height: 110%;
+    -webkit-filter: blur(2px); /* Safari 6.0 - 9.0 */
+    filter: blur(5px);
 }
 
 .background {
@@ -31,7 +41,7 @@ body {
 #myPlot {
     margin-top: 25px;
     width: 85%;
-    height: 50%;
+    height: 65%;
 }
 
 #timeDivDiv {
@@ -72,7 +82,7 @@ body {
 #refreshButton {
     background-image: url(https://www.freeiconspng.com/thumbs/reload-icon/arrow-refresh-reload-icon-29.png);
     background-color: rgb(255, 0, 6);
-    background-size: 75%;
+    background-size: 65%;
     background-position: center;
     background-repeat: no-repeat;
     border-bottom-right-radius: 15px;
@@ -84,68 +94,105 @@ body {
 
 #sensorButtonsDiv {
     margin-top: 20px;
-    border: 1px black solid;
-    width: 30%;
-    height: 3.5%;
+    width: 35%;
+    height: 4%;
     display: flex;
     justify-content: center;
 }
 
-.switch {
+.sensorButton1 {
+    background-color: rgb(220, 0, 0);
     width: 20%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}   .switch input {opacity: 0; height: 0px; width: 0;}
-    .switch:hover {opacity: 85%; border: 1px black solid;}
+}   .sensorButton1 input {opacity: 0; height: 0px; width: 0;}
+    .sensorButton1:hover {opacity: 85%; border: 1px black solid;}
 
-#S1Label{background-color: rgb(220, 0, 0)}
-#S2Label{background-color: rgb(255, 82, 75)}
-#S3Label{background-color: rgb(220, 0, 0)}
-#S4Label{background-color: rgb(255, 82, 75)}
-#S5Label{background-color: rgb(220, 0, 0)}
+.sensorButton1Active {
+    background-color: rgb(220, 0, 0);   
+    border: 1px white solid;
+    opacity: 75%;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   .sensorButton1Active input {opacity: 0; height: 0px; width: 0;}
+    .sensorButton1Active:hover {opacity: 85%; border: 1px black solid;}    
+
+.sensorButton2 {
+    background-color: rgb(255, 82, 75);
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   .sensorButton2 input {opacity: 0; height: 0px; width: 0;}
+    .sensorButton2:hover {opacity: 85%; border: 1px black solid;}
+
+.sensorButton2Active {
+    background-color: rgb(255, 82, 75);   
+    border: 1px white solid;
+    opacity: 75%;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   .sensorButton2Active input {opacity: 0; height: 0px; width: 0;}
+    .sensorButton2Active:hover {opacity: 85%; border: 1px black solid;}
 
 #graphSwitcherDiv {
     width: 12.5%;
-    height: 800px;
+    height: 600px;
     justify-self: flex-start;
 }
-#tempButton {
+.tempButton {
     margin-top: 15%;
     margin-bottom: 12px;
     margin-left: 15%;
-    background-color: red;
+    background-color: rgb(220, 0, 0);
+    border: 2px solid;
     border-radius: 8px;
-}   #tempButton:hover {background-color: pink; border: 2px black solid;}
+    width: 100%;
+    height: 35px;
+}   .tempButton:hover {border: 2px white solid;}
 
-#humButton {
+.tempButtonActive {
+    margin-top: 15%;
+    margin-bottom: 12px;
     margin-left: 15%;
-    background-color: blue;
+    background-color: rgb(220, 0, 0);
+    border: 2px white solid;
     border-radius: 8px;
-}   #humButton:hover {background-color: lightblue; border: 2px black solid;}
+    width: 100%;
+    height: 35px;
+}
 
-.button {
+.humButton {
+    margin-left: 15%;
+    background-color: rgb(255, 82, 75);
+    border: 2px solid;
+    border-radius: 8px;
+    width: 100%;
+    height: 35px;
+}   .humButton:hover {border: 2px white solid;}
+
+.humButtonActive {
+    margin-left: 15%;
+    background-color: rgb(255, 82, 75);
+    border: 2px white solid;
+    border-radius: 8px;
     width: 100%;
     height: 35px;
 }
 
 .filler {
     width: 12.5%;
-    height: 800px;
+    height: 600px;
 }
-
-img.background {
-    position: absolute;
-    left: 0px;
-    top: 55px;
-    z-index: -1;
-    width: 100%;
-    height: 110%;
-    -webkit-filter: blur(2px); /* Safari 6.0 - 9.0 */
-    filter: blur(5px);
-    }
-
 
 footer {
     background-color: white;

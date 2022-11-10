@@ -1,13 +1,11 @@
-// Your web app's Firebase configuration
-
 const firebaseConfig = {
-  apiKey: "AIzaSyDzJMZg8uoitcrbyop9PPu5aQpuw2ja38Q",
-  authDomain: "test-7552f.firebaseapp.com",
-  databaseURL: "https://test-7552f-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "test-7552f",
-  storageBucket: "test-7552f.appspot.com",
-  messagingSenderId: "107856682690",
-  appId: "1:107856682690:web:599547b5814614132be55b"
+  apiKey: "AIzaSyC1Z3eWF5XuyBvX8XPetVs76hy5osSA6KM",
+  authDomain: "skogens-thm.firebaseapp.com",
+  databaseURL: "https://skogens-thm-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "skogens-thm",
+  storageBucket: "skogens-thm.appspot.com",
+  messagingSenderId: "666647829702",
+  appId: "1:666647829702:web:ecefb34b3c3dda0b5b0bc7"
 };
 
 // Initialize Firebase
@@ -15,36 +13,120 @@ firebase.initializeApp(firebaseConfig);
 
 const db = firebase.database();
 
-var room3Ref = db.ref("rum2");
+//room1----------------------------------------------------------------
 
-let timeList = []
+var room1Ref = db.ref("Rum1");
 
-let tempList = []
+let tempList1 = []
+let humList1 = []
 
-room3Ref.once("value").then((snapshot) => {
-  let r2r = snapshot.val()
-  // console.log(r2r)
-  let tempTime = r2r.split(',')
-  // console.log(tempTime)
-  let IDKWhatToNameThis = []
-  for(i = 0; i < tempTime.length; i++){
-      IDKWhatToNameThis.push(tempTime[i].split(' '))
-      // console.log(IDKWhatToNameThis)
-      }
-  
-  for(i=0; i < IDKWhatToNameThis.length; i++){
-      timeList.push(IDKWhatToNameThis[i][0])
-      // console.log(timeList)
+room1Ref.once("value").then((snapshot) => {
+  let r1r = snapshot.val()
+  let r1his = r1r.Historik
+
+  for(i = 0; i < Object.keys(r1his).length; i++){
+      let thisOne = Object.values(r1his)[i].split(' - ')
+      
+      tempList1.push(thisOne[1])
+      humList1.push(thisOne[2])
   }
-
-  for(i=0; i < IDKWhatToNameThis.length; i++){
-      tempList.push(IDKWhatToNameThis[i][1])
-      // console.log(tempList)
-  }
-  console.log(timeList)
-  console.log(tempList)
 })
 
+//room2----------------------------------------------------------------
+
+var room2Ref = db.ref("Rum2");
+
+let timeList = []
+let tempList2 = []
+let humList2 = []
+//Extra timelist for sensor 1 that we started later
+let timeListExtra = []
+
+room2Ref.once("value").then((snapshot) => {
+  let r2r = snapshot.val()
+  let r2his = r2r.Historik
+
+  for(i = 0; i < Object.keys(r2his).length; i++){
+      let thisOne = Object.values(r2his)[i].split('-')
+      
+      tempList2.push(thisOne[1])
+      humList2.push(thisOne[2])
+      timeList.push((Number(thisOne[0])/3600)+1)
+      timeListExtra.push((Number(thisOne[0])/3600)+1+2.4)
+  }
+})
+
+//room3----------------------------------------------------------------
+
+var room3Ref = db.ref("Rum3");
+
+let tempList3 = []
+let humList3 = []
+
+room3Ref.once("value").then((snapshot) => {
+  let r3r = snapshot.val()
+  let r3his = r3r.Historik
+
+  for(i = 0; i < Object.keys(r3his).length; i++){
+      let thisOne = Object.values(r3his)[i].split('-')
+      
+      tempList3.push(thisOne[1])
+      humList3.push(thisOne[2])
+  }
+})
+
+//room4----------------------------------------------------------------
+
+var room4Ref = db.ref("Rum4");
+
+let tempList4 = []
+let humList4 = []
+
+room4Ref.once("value").then((snapshot) => {
+  let r4r = snapshot.val()
+  let r4his = r4r.Historik
+
+  for(i = 0; i < Object.keys(r4his).length; i++){
+      let thisOne = Object.values(r4his)[i].split('-')
+      
+      tempList4.push(thisOne[1])
+      humList4.push(thisOne[2])
+  }
+})
+
+//room5----------------------------------------------------------------
+
+var room5Ref = db.ref("Rum5");
+
+let tempList5 = []
+let humList5 = []
+
+room5Ref.once("value").then((snapshot) => {
+  let r5r = snapshot.val()
+  let r5his = r5r.Historik
+
+  for(i = 0; i < Object.keys(r5his).length; i++){
+      let thisOne = Object.values(r5his)[i].split('-')
+      
+      tempList5.push(thisOne[1])
+      humList5.push(thisOne[2])
+  }
+})
+
+console.log(tempList5)
+console.log(humList5)
+
+let tempArray1 = tempList1
+let tempArray2 = tempList2
+let tempArray3 = tempList3
+let tempArray4 = tempList4
+let tempArray5 = tempList5
+
+let humArray1 = humList1
+let humArray2 = humList2
+let humArray3 = humList3
+let humArray4 = humList4
+let humArray5 = humList5
 
 //Load the graph
 graphFunction()
@@ -52,34 +134,6 @@ graphFunction()
 //Define varibles for temperature and humidity arrays
 var a = 0
 var b = 0
-
-var timeArray = timeList
-
-console.log(timeList)
-
-//Temperature
-  // Sensor 1
-  var temp1Array = [0]
-  // Sensor 2
-  var temp2Array = [0]
-  // Sensor 3
-  var temp3Array = [0]
-  // Sensor 4
-  var temp4Array = [0]
-  // Sensor 5
-  var temp5Array = [0]
-
-//Humidity
-  //Sensor 1
-  var hum1Array = [0]
-  // Sensor 2
-  var hum2Array = [0]
-  // Sensor 3
-  var hum3Array = [0]
-  // Sensor 4
-  var hum4Array = [0]
-  // Sensor 5
-  var hum5Array = [0]
 
   var chosen = 0
 
@@ -103,16 +157,15 @@ console.log(timeList)
     document.getElementById(id="S3").checked = false;
     document.getElementById(id="S4").checked = false;
     document.getElementById(id="S5").checked = false;
-    // document.getElementById(id="SMHI").checked = false;
   }
   
   function humFunction(){
     //Initialize hum arrays to 0
-    hum1Array = [0]
-    hum2Array = [0]
-    hum3Array = [0]
-    hum4Array = [0]
-    hum5Array = [0]
+    humArray1 = [0]
+    humArray2 = [0]
+    humArray3 = [0]
+    humArray3 = [0]
+    humArray5 = [0]
     // humSArray = [0]
     chosen = 2
     graphFunction()
@@ -135,11 +188,9 @@ console.log(timeList)
   sensor1.addEventListener('change', function () {
     if (sensor1.checked) {
       if(chosen == 1){
-        temp1Array = tempList
         graphFunction()
       }
       if(chosen == 2){
-        hum1Array = [4,30,20]
         graphFunction()
       }
       if(chosen == 0){
@@ -147,12 +198,14 @@ console.log(timeList)
         document.getElementById(id="S1").checked = false;
       }
     } else{
-      temp1Array = [0]
+      tempArray1 = [0]
       graphFunction()
 
-      hum1Array = [0]
+      humArray1 = [0]
       graphFunction()
     }
+    tempArray1 = tempList1
+    humArray1 = humList1
   })
   })
 
@@ -163,11 +216,9 @@ console.log(timeList)
     sensor2.addEventListener('change', function () {
       if (sensor2.checked) {
         if(chosen == 1){
-          temp2Array = [4,11,34]
           graphFunction()
         }
         if(chosen == 2){
-          hum2Array = [40,28,18]
           graphFunction()
         }
         if(chosen == 0){
@@ -175,12 +226,14 @@ console.log(timeList)
           document.getElementById(id="S2").checked = false;
         }
       } else{
-        temp2Array = [0]
+        tempArray2 = [0]
         graphFunction()
 
-        hum2Array = [0]
+        humArray2 = [0]
         graphFunction()
       }
+      tempArray2 = tempList2
+      humArray2 = humList2
     })
     })
 
@@ -191,11 +244,9 @@ console.log(timeList)
     sensor3.addEventListener('change', function () {
       if (sensor3.checked) {
         if(chosen == 1){
-          temp3Array = [8,19,44]
           graphFunction()
         }
         if(chosen == 2){
-          hum3Array = [4,30,20]
           graphFunction()
         }
         if(chosen == 0){
@@ -203,12 +254,14 @@ console.log(timeList)
           document.getElementById(id="S3").checked = false;
         }
       } else{
-        temp3Array = [0]
+        tempArray3 = [0]
         graphFunction()
 
-        hum3Array = [0]
+        humArray3 = [0]
         graphFunction()
       }
+      tempArray3 = tempList3
+      humArray3 = humList3
     })
     })
 
@@ -219,11 +272,9 @@ console.log(timeList)
     sensor4.addEventListener('change', function () {
       if (sensor4.checked) {
         if(chosen == 1){
-          temp4Array = [8,19,44]
           graphFunction()
         }
         if(chosen == 2){
-          hum4Array = [4,30,20]
           graphFunction()
         }
         if(chosen == 0){
@@ -231,12 +282,14 @@ console.log(timeList)
           document.getElementById(id="S4").checked = false;
         }
       } else{
-        temp4Array = [0]
+        tempArray4 = [0]
         graphFunction()
 
-        hum4Array = [0]
+        humArray4 = [0]
         graphFunction()
       }
+      tempArray4 = tempList4
+      humArray4 = humList4
     })
     })
 
@@ -247,11 +300,9 @@ console.log(timeList)
     sensor5.addEventListener('change', function () {
       if (sensor5.checked) {
         if(chosen == 1){
-          temp5Array = [8,19,44]
           graphFunction()
         }
         if(chosen == 2){
-          hum5Array = [4,30,20]
           graphFunction()
         }
         if(chosen == 0){
@@ -259,12 +310,14 @@ console.log(timeList)
           document.getElementById(id="S5").checked = false;
         }
       } else{
-        temp5Array = [0]
+        tempArray5 = [0]
         graphFunction()
 
-        hum5Array = [0]
+        humArray5 = [0]
         graphFunction()
       }
+      tempArray5 = tempList5
+      humArray5 = humList5
     })
     })
 
@@ -284,19 +337,19 @@ function graphFunction() {
   if (chosen == 1){
   var data = [
     //Temperature
-    {x: timeArray, y: temp1Array, mode:"lines+markers", 
+    {x: timeListExtra, y: tempArray1, mode:"lines+markers", 
     line: {color: 'rgb(255,0,0)', width: 3}, name: traceName1},
 
-    {x: timeArray, y: temp2Array, mode:"lines+markers", 
+    {x: timeList, y: tempArray2, mode:"lines+markers", 
     line: {color: 'rgb(0,255,0)', width: 3}, name: traceName2},
 
-    {x: timeArray, y: temp3Array, mode:"lines+markers", 
+    {x: timeList, y: tempArray3, mode:"lines+markers", 
     line: {color: 'rgb(0,0,255)', width: 3}, name: traceName3},
 
-    {x: timeArray, y: temp4Array, mode:"lines+markers", 
+    {x: timeList, y: tempArray4, mode:"lines+markers", 
     line: {color: 'rgb(0,255,255)', width: 3}, name: traceName4},
 
-    {x: timeArray, y: temp5Array, mode:"lines+markers", 
+    {x: timeList, y: tempArray5, mode:"lines+markers", 
     line: {color: 'rgb(255,255,0)', width: 3}, name: traceName5},
 
     // {x: timeArray, y: tempSArray, mode:"lines+markers", 
@@ -306,19 +359,19 @@ function graphFunction() {
   if(chosen == 2){
     data = [
     //Humidity
-    {x: timeArray, y: hum1Array, mode:"lines+markers", 
+    {x: timeListExtra, y: humArray1, mode:"lines+markers", 
     line: {color: 'rgb(255,0,0)', width: 3}, name: traceName1},
 
-    {x: timeArray, y: hum2Array, mode:"lines+markers", 
+    {x: timeList, y: humArray2, mode:"lines+markers", 
     line: {color: 'rgb(0,255,0)', width: 3}, name: traceName2},
 
-    {x: timeArray, y: hum3Array, mode:"lines+markers", 
+    {x: timeList, y: humArray3, mode:"lines+markers", 
     line: {color: 'rgb(0,0,255)', width: 3}, name: traceName3},
 
-    {x: timeArray, y: hum4Array, mode:"lines+markers", 
+    {x: timeList, y: humArray4, mode:"lines+markers", 
     line: {color: 'rgb(0,255,255)', width: 3}, name: traceName4},
 
-    {x: timeArray, y: hum5Array, mode:"lines+markers", 
+    {x: timeList, y: humArray5, mode:"lines+markers", 
     line: {color: 'rgb(255,255,0)', width: 3}, name: traceName5},
 
     // {x: timeArray, y: humSArray, mode:"lines+markers", 
@@ -333,14 +386,14 @@ function graphFunction() {
   if (chosen == 1){
     var layout = {
       xaxis: {range: [a, b], title: "Time (Hours)"},
-      yaxis: {range: [0, 50], title: "Temperature (°C)"},
+      yaxis: {range: [15, 30], title: "Temperature (°C)"},
       title: "Temperature"
     }
   }
   if (chosen == 2){
     var layout = {
       xaxis: {range: [a, b], title: "Time (Hours)"},
-      yaxis: {range: [0, 50], title: "Humidity (%)"},
+      yaxis: {range: [39, 54], title: "Humidity (%)"},
       title: "Humidity"
     }
   }
@@ -349,3 +402,69 @@ function graphFunction() {
   Plotly.newPlot("myPlot", data, layout)
 }
 // Axel Roxenborg
+
+
+
+
+// Changing the buttons' appearance while active
+  function S1Style(){
+    if (S1.checked){
+      S1Label.className = "sensorButton1Active"
+    } else {
+      S1Label.className = "sensorButton1"
+    }
+  }
+
+  function S2Style(){
+    if (S2.checked){
+      S2Label.className = "sensorButton2Active"
+    } else {
+      S2Label.className = "sensorButton2"
+    }
+  }
+
+  function S3Style(){
+    if (S3.checked){
+      S3Label.className = "sensorButton1Active"
+    } else {
+      S3Label.className = "sensorButton1"
+    }
+  }
+
+  function S4Style(){
+    if (S4.checked){
+      S4Label.className = "sensorButton2Active"
+    } else {
+      S4Label.className = "sensorButton2"
+    }
+  }
+
+  function S5Style(){
+    if (S5.checked){
+      S5Label.className = "sensorButton1Active"
+    } else {
+      S5Label.className = "sensorButton1"
+    }
+  }
+
+  function tempStyle(){
+    temp.className = "tempButtonActive"
+    hum.className = "humButton"
+    //since temp and hum reset the sensor buttons:
+      S1Label.className = "sensorButton1"
+      S2Label.className = "sensorButton2"
+      S3Label.className = "sensorButton1"
+      S4Label.className = "sensorButton2"
+      S5Label.className = "sensorButton1"
+  }
+
+  function humStyle(){
+    hum.className = "humButtonActive"
+    temp.className = "tempButton"
+    S1Label.className = "sensorButton1"
+    S2Label.className = "sensorButton2"
+    S3Label.className = "sensorButton1"
+    S4Label.className = "sensorButton2"
+    S5Label.className = "sensorButton1"
+  }
+  // Oliver Sarebro

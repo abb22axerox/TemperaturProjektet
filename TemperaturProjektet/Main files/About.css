@@ -1,5 +1,15 @@
+img.background {
+    position: absolute;
+    left: 0px;
+    top: 55px;
+    z-index: -1;
+    width: 100%;
+    height: 110%;
+    -webkit-filter: blur(2px); /* Safari 6.0 - 9.0 */
+    filter: blur(5px);
+}
+
 body{
-    background-color: lightblue;
     margin: 0;
 }
 
@@ -18,11 +28,6 @@ body{
     width: 70%;
 }
 
-#contactInfo {
-    margin-top: 2%;
-    margin-left: 5%;
-}
-
 .contacts {
     display: flex;
     flex-direction: row;
@@ -37,6 +42,6 @@ body{
 }
 
 .copyEmail {
-    background-color: aquamarine;
+    background-color: rgb(255, 82, 75);
     border: 1px black solid;
 }   .copyEmail:hover {opacity: 85%; border: 2px black solid;}

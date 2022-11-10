@@ -15,12 +15,14 @@
     width: 15%;
     height: 60%;
     font-size: large;
-}   #iHetasteLaget:hover{animation-name: logo; animation-duration: 2s; animation-iteration-count: infinite;}
+}   #iHetasteLaget:hover{animation-name: logo; animation-duration: 5s; animation-iteration-count: infinite;}
 
 @keyframes logo {
-    0% {background-color: blue;}
-    50% {background-color: white;}
-    100% {background-color: blue;}
+    0% {background-color: white;}
+    25% {background-color: rgb(220, 0, 0);}
+    50% {background: white;}
+    75% {background-color: rgb(220, 0, 0);}
+    100% {background-color: white;}
 }
 
 #navButtonsDiv {
@@ -33,18 +35,19 @@
 
 .navButton {
     background-color: white;
+    font-weight: bold;
     height: 60%;
     width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
-}   .navButton:hover {animation-name: navButton;  animation-duration: 5s; animation-iteration-count: infinite; font-weight: bold;}
+}   .navButton:hover {animation-name: navButton;  animation-duration: 4s; animation-iteration-count: infinite;}
 
 @keyframes navButton {
     0% {background-color: white;}
-    25% {background-color: thistle;}
+    25% {background-color: rgb(255, 82, 75);}
     50% {background-color: white;}
-    75% {background-color: thistle;}
+    75% {background-color: rgb(255, 82, 75);}
     100% {background-color: white;}
 }
 
@@ -52,7 +55,7 @@
     margin-right: 8%;
 }
 
-#navAboutUs {
+#navTheAbout {
     margin-right: 8%;
 }
 
