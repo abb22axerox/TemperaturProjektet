@@ -54,7 +54,7 @@ room2Ref.once("value").then((snapshot) => {
       
       tempList2.push(thisOne[1])
       humList2.push(thisOne[2])
-      timeList.push(Number(thisOne[0])/3600)
+      timeList.push(Number(thisOne[0])/3)
   }
 })
 
@@ -404,7 +404,7 @@ function graphFunction() {
   if (chosen == 1){
     var layout = {
       xaxis: {range: [a, b], title: "Time (Hours)"},
-      yaxis: {range: [0, 50], title: "Temperature (°C)"},
+      yaxis: {range: [15, 30], title: "Temperature (°C)"},
       title: "Temperature"
     }
   }
