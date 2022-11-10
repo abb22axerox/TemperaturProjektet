@@ -94,7 +94,6 @@ console.log(timeList)
     temp3Array = [0]
     temp4Array = [0]
     temp5Array = [0]
-    // tempSArray = [0]
     chosen = 1
     graphFunction()
     //Reset checkboxes
@@ -103,7 +102,6 @@ console.log(timeList)
     document.getElementById(id="S3").checked = false;
     document.getElementById(id="S4").checked = false;
     document.getElementById(id="S5").checked = false;
-    // document.getElementById(id="SMHI").checked = false;
   }
   
   function humFunction(){
@@ -349,3 +347,65 @@ function graphFunction() {
   Plotly.newPlot("myPlot", data, layout)
 }
 // Axel Roxenborg
+
+// Changing the buttons' appearance while active
+// can use .style... instead of .className but that will have higher prio than the css file
+  function S1Style(){
+    if (S1.checked){
+      S1Label.className = "sensorButton1Active"
+    } else {
+      S1Label.className = "sensorButton1"
+    }
+  }
+
+  function S2Style(){
+    if (S2.checked){
+      S2Label.className = "sensorButton2Active"
+    } else {
+      S2Label.className = "sensorButton2"
+    }
+  }
+
+  function S3Style(){
+    if (S3.checked){
+      S3Label.className = "sensorButton1Active"
+    } else {
+      S3Label.className = "sensorButton1"
+    }
+  }
+
+  function S4Style(){
+    if (S4.checked){
+      S4Label.className = "sensorButton2Active"
+    } else {
+      S4Label.className = "sensorButton2"
+    }
+  }
+
+  function S5Style(){
+    if (S5.checked){
+      S5Label.className = "sensorButton1Active"
+    } else {
+      S5Label.className = "sensorButton1"
+    }
+  }
+
+  function tempStyle(){
+    temp.className = "tempButtonActive"
+    hum.className = "humButton"
+      S1Label.className = "sensorButton1"
+      S2Label.className = "sensorButton2"
+      S3Label.className = "sensorButton1"
+      S4Label.className = "sensorButton2"
+      S5Label.className = "sensorButton1"
+  }
+
+  function humStyle(){
+    hum.className = "humButtonActive"
+    temp.className = "tempButton"
+    S1Label.className = "sensorButton1"
+    S2Label.className = "sensorButton2"
+    S3Label.className = "sensorButton1"
+    S4Label.className = "sensorButton2"
+    S5Label.className = "sensorButton1"
+  }
