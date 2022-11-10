@@ -137,6 +137,12 @@ let tempArray3 = tempList3
 let tempArray4 = tempList4
 let tempArray5 = tempList5
 
+let humArray1 = humList1
+let humArray2 = humList2
+let humArray3 = humList3
+let humArray4 = humList4
+let humArray5 = humList5
+
 //Load the graph
 graphFunction()
 
@@ -170,11 +176,11 @@ var b = 0
   
   function humFunction(){
     //Initialize hum arrays to 0
-    humList1 = [0]
-    humList2 = [0]
-    humList3 = [0]
-    humList3 = [0]
-    humList5 = [0]
+    humArray1 = [0]
+    humArray2 = [0]
+    humArray3 = [0]
+    humArray3 = [0]
+    humArray5 = [0]
     // humSArray = [0]
     chosen = 2
     graphFunction()
@@ -212,10 +218,11 @@ var b = 0
       // console.log(tempArray1)
       graphFunction()
 
-      humList1 = [0]
+      humArray1 = [0]
       graphFunction()
     }
     tempArray1 = tempList1
+    humArray1 = humList1
   })
   })
   // console.log(tempArray1)
@@ -240,10 +247,11 @@ var b = 0
         tempArray2 = [0]
         graphFunction()
 
-        humList2 = [0]
+        humArray2 = [0]
         graphFunction()
       }
       tempArray2 = tempList2
+      humArray2 = humList2
     })
     })
 
@@ -267,10 +275,11 @@ var b = 0
         tempArray3 = [0]
         graphFunction()
 
-        humList3 = [0]
+        humArray3 = [0]
         graphFunction()
       }
       tempArray3 = tempList3
+      humArray3 = humList3
     })
     })
 
@@ -298,6 +307,7 @@ var b = 0
         graphFunction()
       }
       tempArray4 = tempList4
+      humArray4 = humList4
     })
     })
 
@@ -321,10 +331,11 @@ var b = 0
         tempArray5 = [0]
         graphFunction()
 
-        humList5 = [0]
+        humArray5 = [0]
         graphFunction()
       }
       tempArray5 = tempList5
+      humArray5 = humList5
     })
     })
 
@@ -366,19 +377,19 @@ function graphFunction() {
   if(chosen == 2){
     data = [
     //Humidity
-    {x: timeList, y: humList1, mode:"lines+markers", 
+    {x: timeList, y: humArray1, mode:"lines+markers", 
     line: {color: 'rgb(255,0,0)', width: 3}, name: traceName1},
 
-    {x: timeList, y: humList2, mode:"lines+markers", 
+    {x: timeList, y: humArray2, mode:"lines+markers", 
     line: {color: 'rgb(0,255,0)', width: 3}, name: traceName2},
 
-    {x: timeList, y: humList3, mode:"lines+markers", 
+    {x: timeList, y: humArray3, mode:"lines+markers", 
     line: {color: 'rgb(0,0,255)', width: 3}, name: traceName3},
 
-    {x: timeList, y: humList3, mode:"lines+markers", 
+    {x: timeList, y: humArray3, mode:"lines+markers", 
     line: {color: 'rgb(0,255,255)', width: 3}, name: traceName4},
 
-    {x: timeList, y: humList5, mode:"lines+markers", 
+    {x: timeList, y: humArray5, mode:"lines+markers", 
     line: {color: 'rgb(255,255,0)', width: 3}, name: traceName5},
 
     // {x: timeArray, y: humSArray, mode:"lines+markers", 
