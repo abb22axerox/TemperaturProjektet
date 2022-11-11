@@ -29,16 +29,6 @@
         75% {background-color: rgb(220, 0, 0);}
     }
 
-    #change-text-color {
-            background-color: red;
-            font-weight: bold;
-            height: 60%;
-            width: 25%;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            cursor: pointer;
-    }
 /*all three right side buttons*/
     #navButtonsDiv {
         width: 40%;
