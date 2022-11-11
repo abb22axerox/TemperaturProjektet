@@ -4,12 +4,15 @@
 <title>Settings - I Hetaste Laget</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="Navigation.css">
-<link rel="stylesheet" href="Settings.css">
+  <!--css docs-->
+  <link rel="stylesheet" href="Navigation.css">
+  <link rel="stylesheet" href="Settings.css">
 </head>
 
 <body>
+  <!--background image-->
   <img class="background" src="Vasteras_Finnslatten_Markperspektiv_190703_utan_logga_ALV_EJ-FRI-ANV-2048x1024-1.jpg" alt="backG">
+  <!--page switcher-->
   <div id="navBar">
     <button id="iHetasteLaget"><strong>I Hetaste Laget</strong></button>
     <div id="navButtonsDiv">
@@ -19,7 +22,9 @@
     </div>
   </div>
   <div id="settingsDiv">
+    <!--title-->
     <h1 class="settings">Settings</h1>
+    <!--settings-->
     <form class="settings">
       <label class="sensorLabel">Sensor1 Name:<br />
       <input type="text" class="sensorInput" id="sensor1Value"/></label>
@@ -45,8 +50,10 @@
       <input type="text" class="sensorInput" id="sensor5Value"/></label>
     </form>
     <br>
+    <!--save settings-->
     <input class="settings" id="saveSensorNames" type="submit" value="Save" onclick="getData()">
   </div>
+  <!--javascript-->
   <script src="Settings.js"></script>
   <script src="Navigation.js"></script>
 </body>
