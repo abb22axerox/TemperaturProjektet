@@ -66,7 +66,7 @@ img.background {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-}   #startTime {height: auto; width: 35%; margin-right: 2.5%;}
+}   #startTime {height: auto; width: 35%; margin-right: 2.5%; background-color: transparent;}
 
 #stopTimeDiv {
     background-color: rgb(255, 82, 75);
@@ -76,7 +76,7 @@ img.background {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-}   #stopTime {height: auto; width: 35%; margin-right: 2.5%;}
+}   #stopTime {height: auto; width: 35%; margin-right: 2.5%; background-color: transparent;}
 
 #refreshButton {
     background-image: url(https://www.freeiconspng.com/thumbs/reload-icon/arrow-refresh-reload-icon-29.png);
