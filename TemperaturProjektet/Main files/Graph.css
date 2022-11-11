@@ -56,7 +56,6 @@ img.background {
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
-    
 }
 
 #startTimeDiv {
@@ -100,92 +99,95 @@ img.background {
     justify-content: center;
 }
 
-.sensorButton1 {
-    background-color: rgb(220, 0, 0);
-    width: 20%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}   .sensorButton1 input {opacity: 0; height: 0px; width: 0;}
-    .sensorButton1:hover {border: 2px white solid;}
+/*graph.js switches between .sensorButton(1/2) and .sensorButton(1/2)Active*/
+    .sensorButton1 {
+        background-color: rgb(220, 0, 0);
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }   .sensorButton1 input {opacity: 0; height: 0px; width: 0;}
+        .sensorButton1:hover {border: 2px white solid;}
 
-.sensorButton1Active {
-    background-color: rgb(220, 0, 0);   
-    border: 2px white solid;
-    width: 20%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}   .sensorButton1Active input {opacity: 0; height: 0px; width: 0;}
-    .sensorButton1Active:hover {border: 0;}    
+    .sensorButton1Active {
+        background-color: rgb(220, 0, 0);   
+        border: 2px white solid;
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }   .sensorButton1Active input {opacity: 0; height: 0px; width: 0;}
+        .sensorButton1Active:hover {border: 0;}    
 
-.sensorButton2 {
-    background-color: rgb(255, 82, 75);
-    width: 20%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}   .sensorButton2 input {opacity: 0; height: 0px; width: 0;}
-    .sensorButton2:hover {border: 2px white solid;}
+    .sensorButton2 {
+        background-color: rgb(255, 82, 75);
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }   .sensorButton2 input {opacity: 0; height: 0px; width: 0;}
+        .sensorButton2:hover {border: 2px white solid;}
 
-.sensorButton2Active {
-    background-color: rgb(255, 82, 75);   
-    border: 2px white solid;
-    width: 20%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}   .sensorButton2Active input {opacity: 0; height: 0px; width: 0;}
-    .sensorButton2Active:hover {border: 0;}
+    .sensorButton2Active {
+        background-color: rgb(255, 82, 75);   
+        border: 2px white solid;
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }   .sensorButton2Active input {opacity: 0; height: 0px; width: 0;}
+        .sensorButton2Active:hover {border: 0;}
 
 #graphSwitcherDiv {
     width: 12.5%;
     height: 600px;
     justify-self: flex-start;
 }
-.tempButton {
-    margin-top: 15%;
-    margin-bottom: 12px;
-    margin-left: 15%;
-    background-color: rgb(220, 0, 0);
-    border: 2px solid;
-    border-radius: 8px;
-    width: 100%;
-    height: 35px;
-}   .tempButton:hover {border: 2px white solid;}
 
-.tempButtonActive {
-    margin-top: 15%;
-    margin-bottom: 12px;
-    margin-left: 15%;
-    background-color: rgb(220, 0, 0);
-    border: 2px white solid;
-    border-radius: 8px;
-    width: 100%;
-    height: 35px;
-}
+/*same as sensor buttons*/
+    .tempButton {
+        margin-top: 15%;
+        margin-bottom: 12px;
+        margin-left: 15%;
+        background-color: rgb(220, 0, 0);
+        border: 2px solid;
+        border-radius: 8px;
+        width: 100%;
+        height: 35px;
+    }   .tempButton:hover {border: 2px white solid;}
 
-.humButton {
-    margin-left: 15%;
-    background-color: rgb(255, 82, 75);
-    border: 2px solid;
-    border-radius: 8px;
-    width: 100%;
-    height: 35px;
-}   .humButton:hover {border: 2px white solid;}
+    .tempButtonActive {
+        margin-top: 15%;
+        margin-bottom: 12px;
+        margin-left: 15%;
+        background-color: rgb(220, 0, 0);
+        border: 2px white solid;
+        border-radius: 8px;
+        width: 100%;
+        height: 35px;
+    }
 
-.humButtonActive {
-    margin-left: 15%;
-    background-color: rgb(255, 82, 75);
-    border: 2px white solid;
-    border-radius: 8px;
-    width: 100%;
-    height: 35px;
-}
+    .humButton {
+        margin-left: 15%;
+        background-color: rgb(255, 82, 75);
+        border: 2px solid;
+        border-radius: 8px;
+        width: 100%;
+        height: 35px;
+    }   .humButton:hover {border: 2px white solid;}
+
+    .humButtonActive {
+        margin-left: 15%;
+        background-color: rgb(255, 82, 75);
+        border: 2px white solid;
+        border-radius: 8px;
+        width: 100%;
+        height: 35px;
+    }
 
 .filler {
     width: 12.5%;

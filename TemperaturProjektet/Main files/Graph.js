@@ -461,4 +461,4 @@ function graphFunction() {
     S4Label.className = "sensorButton2"
     S5Label.className = "sensorButton1"
   }
-  // Oliver Sarebro
+// Oliver Sarebro
