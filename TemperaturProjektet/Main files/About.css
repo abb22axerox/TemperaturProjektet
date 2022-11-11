@@ -19,29 +19,33 @@ body{
     align-items: center;
 }
 
-.title {
+#title {
     margin-left: 2%;
     margin-top: 2%;
+    margin-bottom: 0;
 }
 
-.aboutProject {
-    width: 70%;
-}
+/*:hover for text visibility*/
+    #aboutProject {
+        width: 70%;
+        padding: 1%;
+        text-align: center;
+    }   #aboutProject:hover {background-color: rgb(255, 255, 255, 25%); border: 2px rgb(220, 0, 0) solid; border-radius: 4px;}
 
-.contacts {
-    display: flex;
-    flex-direction: row;
-}
+    #contacts {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
 
-.contact {
-    width: 18%;
-}
+    .contact {
+        padding: 2%;
+        text-align: center;
+    }   .contact:hover {background-color: rgb(255, 255, 255, 25%); border: 2px rgb(220, 0, 0) solid; border-radius: 4px;}
 
-#roxContact {
-    margin-left: 5%;
-}
-
-.copyEmail {
-    background-color: rgb(255, 82, 75);
-    border: 1px black solid;
-}   .copyEmail:hover {opacity: 85%; border: 2px black solid;}
+    .copyEmail {
+        background-color: transparent;
+        border: 2px rgb(220, 0, 0) solid;
+        border-radius: 4px;
+    }   .copyEmail:hover {background-color: rgb(255, 82, 75);}
