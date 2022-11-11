@@ -348,9 +348,6 @@ function graphFunction() {
 
     {x: timeList, y: tempArray5, mode:"lines+markers", 
     line: {color: 'rgb(255,255,0)', width: 3}, name: traceName5},
-
-    // {x: timeArray, y: tempSArray, mode:"lines+markers", 
-    // line: {color: 'rgb(0,0,0)', width: 3}, name:"SMHI Temp"}
   ]}
 
   if(chosen == 2){
@@ -370,9 +367,6 @@ function graphFunction() {
 
     {x: timeList, y: humArray5, mode:"lines+markers", 
     line: {color: 'rgb(255,255,0)', width: 3}, name: traceName5},
-
-    // {x: timeArray, y: humSArray, mode:"lines+markers", 
-    // line: {color: 'rgb(0,0,0)', width: 3}, name:"SMHI Hum"}
   ]}
 
   a = Number(document.getElementById("startTime").value)
