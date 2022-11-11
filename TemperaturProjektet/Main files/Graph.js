@@ -400,9 +400,6 @@ function graphFunction() {
 }
 // Axel Roxenborg
 
-
-
-
 // Changing the buttons' appearance while active
   function S1Style(){
     if (S1.checked){

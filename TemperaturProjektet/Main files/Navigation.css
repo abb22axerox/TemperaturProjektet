@@ -14,15 +14,17 @@
     margin-left: 2%;
     width: 15%;
     height: 60%;
+    animation-name: logo; 
+    animation-duration: 5s; 
+    animation-iteration-count: infinite;
     font-size: large;
-}   #iHetasteLaget:hover{animation-name: logo; animation-duration: 5s; animation-iteration-count: infinite;}
+}
 
 @keyframes logo {
     0% {background-color: white;}
     25% {background-color: rgb(220, 0, 0);}
-    50% {background: white;}
+    50% {background-color: white;}
     75% {background-color: rgb(220, 0, 0);}
-    100% {background-color: white;}
 }
 
 #navButtonsDiv {

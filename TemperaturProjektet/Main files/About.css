@@ -19,16 +19,17 @@ body{
     align-items: center;
 }
 
-.title {
+#title {
     margin-left: 2%;
     margin-top: 2%;
+    margin-bottom: 0;
 }
 
 #aboutProject {
     width: 70%;
     padding: 1%;
     text-align: center;
-}   #aboutProject:hover {background-color: rgb(255, 255, 255, 25%); border: 2px rgb(220, 0, 0, 100%) solid; border-radius: 4px; color: rgb(0, 0, 0, 100%);}
+}   #aboutProject:hover {background-color: rgb(255, 255, 255, 25%); border: 2px rgb(220, 0, 0) solid; border-radius: 4px;}
 
 #contacts {
     display: flex;
@@ -40,7 +41,7 @@ body{
 .contact {
     padding: 2%;
     text-align: center;
-}   .contact:hover {background-color: rgb(255, 255, 255, 25%); border: 2px rgb(220, 0, 0, 100%) solid; border-radius: 4px; color: rgb(0, 0, 0, 100%);}
+}   .contact:hover {background-color: rgb(255, 255, 255, 25%); border: 2px rgb(220, 0, 0) solid; border-radius: 4px;}
 
 .copyEmail {
     background-color: transparent;
