@@ -89,7 +89,7 @@ img.background {
     border: 0ch;
     width: 25%;
     height: auto;
-}   #refreshButton:hover {border: 2px black solid; opacity: 85%;}
+}   #refreshButton:hover {border: 2px white solid; opacity: 85%;}
 
 #sensorButtonsDiv {
     margin-top: 20px;
