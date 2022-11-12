@@ -50,7 +50,7 @@ room2Ref.once("value").then((snapshot) => {
   let r2his = r2r.Historik
 
   for(i = 0; i < Object.keys(r2his).length; i++){
-      let thisOne = Object.values(r2his)[i].split('-')
+      let thisOne = Object.values(r2his)[i].split(' - ')
       
       tempList2.push(thisOne[1])
       humList2.push(thisOne[2])
@@ -75,7 +75,7 @@ room3Ref.once("value").then((snapshot) => {
   let r3his = r3r.Historik
 
   for(i = 0; i < Object.keys(r3his).length; i++){
-      let thisOne = Object.values(r3his)[i].split('-')
+      let thisOne = Object.values(r3his)[i].split(' - ')
       
       tempList3.push(thisOne[1])
       humList3.push(thisOne[2])
@@ -98,7 +98,7 @@ room4Ref.once("value").then((snapshot) => {
   let r4his = r4r.Historik
 
   for(i = 0; i < Object.keys(r4his).length; i++){
-      let thisOne = Object.values(r4his)[i].split('-')
+      let thisOne = Object.values(r4his)[i].split(' - ')
       
       tempList4.push(thisOne[1])
       humList4.push(thisOne[2])
@@ -121,7 +121,7 @@ room5Ref.once("value").then((snapshot) => {
   let r5his = r5r.Historik
 
   for(i = 0; i < Object.keys(r5his).length; i++){
-      let thisOne = Object.values(r5his)[i].split('-')
+      let thisOne = Object.values(r5his)[i].split(' - ')
       
       tempList5.push(thisOne[1])
       humList5.push(thisOne[2])
