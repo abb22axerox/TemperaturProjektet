@@ -1,3 +1,4 @@
+//Navigation javaScript
 function theSettingsPage(){
     window.location.href = "Settings.html"
   }

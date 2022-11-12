@@ -12,15 +12,33 @@ img.background {
 body {
     margin: 0;
 }
+
+#settingsDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .settings {
     margin-left: 2%;
+    justify-self: center;
+}
+
+.sensorLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sensorInput {
-    border: 0;
-    background-color: rgb(255, 82, 75);
-}   .sensorInput:hover {opacity: 85%; border: 2px black solid;}
+    background-color: transparent;
+    border: 2px rgb(220, 0, 0) solid;
+    border-radius: 4px;
+}   .sensorInput:hover {background-color: rgb(255, 82, 75);}
+    .sensorInput:focus {background-color: rgb(255, 82, 75);}
 
 #saveSensorNames{
-    background-color: rgb(255, 82, 75);
-}
+    background-color: transparent;
+    border: 2px rgb(220, 0, 0) solid;
+    border-radius: 4px;
+}   #saveSensorNames:hover {background-color: rgb(255, 82, 75);}
